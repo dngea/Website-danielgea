@@ -1,0 +1,353 @@
+:root{
+    --dark: #1A1918;
+    --primary: #CA9111;
+    --secondary: #D5D3C4;
+    --background: #FFF4E9;
+  }
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    width: 100%;
+    overflow-x: hidden;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}  
+
+body{ 
+    font-family: 'Roboto';
+    background-color: var(--background);
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* BODY--------------- */
+
+.contenedor{
+    max-width: 1544px;
+    display: flex;
+    margin: 0 auto;
+    overflow:visible;
+}
+
+.page__description{
+    width: 40%;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+}
+
+.page__showProjects{
+    width: 60%;
+    border-left: 2px solid black;
+    min-width: 0;
+}
+
+.titulo {
+    font-family: "DM mono";
+    font-size:3rem;
+    text-align: left;
+    font-weight: 400;
+    color: var(--dark);
+    margin: 1.5rem 0 1.5rem;
+    padding: 1%;
+    width: 100%;
+}
+
+.description{
+    font: "Roboto";
+    font-size: 1rem;
+    line-height: 2rem;
+    letter-spacing: 0.05rem;
+    text-align: justify;
+
+}
+
+
+footer {
+    position: fixed;
+  bottom: 0px;
+  width:  100%;
+  padding: 10px;
+  padding-left: 30px;
+  opacity: 0.5;
+  background-color: #2d2d2d;
+  font-size: 10px;
+   color: azure;
+}
+
+
+
+a{ 
+    text-decoration: none;
+    list-style: none;
+}
+
+
+
+.grid2x2{
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-content: center;
+}
+
+.grid_responsive{
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+
+
+.item{ 
+    position: relative;
+    /* border: 2px solid black; */
+    min-width: 21rem;
+    min-height: 21rem;
+    background-repeat:no-repeat;
+    object-fit:cover;
+    background-position: center center;
+    filter: grayscale(1);
+    background-size: cover;
+}
+.item:hover{
+    filter: grayscale(0);
+    background-size: 150%;
+    transition: 0.3s ease-in-out;
+    filter: brightness(1.2);
+    border: 6px solid var(--primary);
+}
+
+
+.item__text{
+    position: absolute;
+    bottom: 0rem;
+    width: 100%;
+    padding: 1.3rem;
+    color: rgb(250,250,250);
+}
+
+.item .item__text{
+    background-color: rgba(30,30,30, 0); 
+}
+.item:hover .item__text{
+    background-color: rgba(30, 30, 30, 0.929); 
+    transition: 0.3s ease-in-out;
+}
+
+.item__text .nombre{
+    font-size: 0rem;
+    font-weight: 800;
+    font-family: "Roboto";
+    text-align: left;
+    letter-spacing: 0.1rem;
+    line-height: 1.7rem;
+}
+.item:hover .item__text .nombre{
+    font-size:1.2rem; 
+}
+
+
+
+
+.info{
+    width: 0%;
+    height: 100%;
+    background: rgb(30,30,30);
+    transition: 1s ease;
+}
+.infohover{
+    width: 100%;
+    background-color: rgb(120,120,120);
+    transition: 1s ease;
+    border-bottom:2px solid black;
+}
+
+.dn{
+    position: absolute;
+    top:-1px;
+    right: 2%;
+    width: 50px;
+    height: 40px;
+    opacity: 0.6;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.dn:hover{
+    opacity: 1;
+}
+.dn img{
+    position: absolute;
+    width: 50px;
+    height: 40px;
+}
+
+.grid--bottom{
+    background-position: center bottom;
+}
+.grid--top{
+    background-position: center top;
+}
+
+
+
+
+/* ABOUT & CONTACT */
+
+.contenedor-about{
+    max-width: 1544px;
+    margin: 0 auto;
+    overflow: visible;
+}
+.about{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 2rem;
+}
+.about__img{
+    width: 300px;
+    display: block;
+    margin: auto;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about__info{
+    width: 100%;
+}
+.h2{
+    width: 100%;
+    font-family: "Raleway";
+    font-weight: 800;
+    color: var(--dark);
+    font-size: 1.5em;
+    padding: 2rem 0 1rem;
+}
+.p{
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--dark);
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    text-align: justify;
+}
+
+.about-information{
+    width: 100%;
+    padding: 2rem;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+.about-information__topic{
+    width: 100%;
+    display: inline-block;
+}
+.contact{
+    width: 100%;
+    padding: 2rem;
+    margin: 2rem 0 5rem 0;
+}
+
+.footer{
+    width: 100%;
+}
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (min-width: 672px) {
+    .contenedor-about{
+        padding: 2rem;
+    }
+}
+@media (max-width: 960px) {
+
+    .contenedor{
+        flex-direction: column;
+    }
+
+    .page__description{
+        width: 100%;
+    }
+
+    .page__showProjects{
+        width: 100%;
+        
+    }
+    .page__showProjects{
+        border-left: 0px solid black;
+    }
+    .grid_responsive{
+        padding: 2.5rem;
+    }
+    .item .item__text{
+        background-color: rgba(30, 30, 30, 0.75); 
+    }
+    .item .item__text .nombre{
+        font-size: 1rem;
+    } 
+   
+}
+@media (min-width: 920px) {
+    
+   /* ABOUT */
+    .about{
+        width: 100%;
+        display: flex;
+    }
+    .about__info{
+        width: 60%;
+        padding: 2rem;
+    }
+    .about-information{
+        padding: 1rem 6rem;
+        margin-bottom: 2rem;
+    }
+    .contact{
+        padding: 0 6rem;
+        margin: 0 0 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact .h2{
+        text-align: center;
+    }
+    
+
+}
+
+.flex{
+    width: 100%;
+    display: flex;
+    gap: 20%;
+}
+.bold{
+    font-family: "Raleway";
+    font-weight: bold;
+}
+.italic{
+    font-style: italic;
+}

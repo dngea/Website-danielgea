@@ -1,0 +1,417 @@
+
+
+html, body{
+    position:relative;
+    z-index: 3;
+}
+h2{
+    margin: 2rem 0;
+}
+h3{
+    margin: 1rem 0;
+    color: var(--primary);
+}
+h4{
+    margin: 1.5rem 0 0.5rem;
+}
+p{
+    padding-top: 0;   
+}
+
+.primary{
+    color: var(--primary);
+    font-weight: 600;
+}
+
+
+.contenedor{
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container-1000{
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+
+/* Project Introduction Styling */
+.project {
+    margin: 2rem auto;
+    margin-bottom: 2vh;
+}
+
+/* Center the header title */
+.project__header {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+.project__header h1{
+    width: 100%;
+    margin-bottom:1.5rem ;
+}
+.date{
+    color: var(--primary);
+    padding: 0 1rem 0 0;
+}
+.location{
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 0 1rem;
+}
+
+
+/* Styling for the content container with Grid */
+.project__content {
+    display: grid;
+    grid-template-columns: 2fr 3fr; /* Two equal columns */
+    gap: 2rem; /* Space between columns */
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Columns for technical and summary */
+.technical-rider, 
+.summary {
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.technical-rider a:hover > p {
+    color: #6e6e6e; /* Change text color on hover */
+}
+
+
+
+
+
+
+
+/* CAROUSEL HERO */
+
+.carousel-container {
+    width: 100%; /* Ocupa el ancho completo del viewport */
+    height: 75vh; /* Altura ajustada */
+    position: relative;
+    overflow: hidden; /* Asegura que solo se vea una imagen */
+    margin: 8rem 0;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    background-color: #6e6e6e;
+  }
+  
+  .carousel-frame {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Solo una imagen visible a la vez */
+    position: relative;
+  }
+  
+  .carousel-images {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease; /* Animación suave para el desplazamiento */
+  }
+  
+  .carousel-images img {
+    width: calc(100% / 4); /* Asigna a cada imagen el 25% del ancho, ajusta el número 4 según el total de imágenes */
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  }
+  
+  .prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.1);
+    color: var(--background);
+    border: none;
+    padding: 5rem 1.25rem;
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+
+
+
+.page-ux{
+    --parallax-bg-image: url('/img/home/design-thinking-bg.jpg');
+}
+.page-multimedia{
+    --parallax-bg-image: url('/img/multimedia/methodology.jpg');
+}
+.page-frontend{
+    --parallax-bg-image: url('/img/headerldn.jpg');
+}
+
+
+
+/* Style for the parallax section */
+
+.parallax {
+    position: relative;
+    min-height: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: var(--parallax-bg-image); /* Usa la variable */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: brightness(0.75) blur(3px);
+    z-index: 0;
+}
+.parallax-text {
+    color: white;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1;
+}
+.parallax-text h2{
+    background-color: var(--primary);
+    padding: 1rem 2rem;
+    color: var(--background);
+}
+.parallax-text h3{
+    color: var(--primary);
+}
+.parallax-text img{
+    width: 350px;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.case-study{
+    margin: 5rem 0;
+    /* border: 3px var(--primary) solid; */
+}
+.case-study__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.case-study__header h2{
+    padding: 0 2rem;
+    white-space: nowrap;
+}
+.divider{
+    flex-grow: 1; /* Hace que las líneas crezcan para llenar el espacio */
+    border: none; /* Elimina el borde predeterminado */
+    border-top: 1px solid var(--primary); /* Línea superior */
+    margin: 0 10px; /* Espacio entre el texto y las líneas */
+    opacity: 0.15;
+}
+
+.case-study__body{
+    display: grid;
+    grid-template-columns: 1fr 3fr; 
+    gap: 2rem; /* Space between columns */
+    margin: 0 auto;
+    text-align: left;
+    padding: 2rem;
+}
+.case-study__body--summary, .case-study__body--content{
+    /* background-color: aqua; */
+}
+.case-study__body--content h2{
+    margin-top: 1rem;
+}
+.case-study__body--content h3{
+    color: var(--black);
+    margin-top: 2rem;
+}
+.case-study__body--summary h4{
+    margin-top: 2.8rem;
+    color: var(--primary);
+}
+
+.case-study__body--content ul {
+    list-style-type: disc; /* Ensures bullets are used for the list items */
+    padding-left: 2rem; /* Adds some space to the left of the list */
+    margin: 2rem; /* Removes default margin */
+}
+
+.case-study__body--content li{
+    font-family: var(--paragraph-font);
+    color: var(--black);
+    letter-spacing: 0.75px;
+    line-height: 2rem;
+    text-align:left;
+    font-weight:400;
+    font-size: 1.1rem;
+}
+
+.flex{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+.text-flex{
+    width: 50%;
+    flex-basis: calc(50% - 2rem);
+}
+.margin-top{
+    margin-top: 1rem;
+}
+
+
+
+.hero {
+    background-size: contain; /* Asegura que la imagen cubra todo el área del div */
+    background-position: center; /* Centra la imagen dentro del contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100vw; /* Usa el ancho completo de la ventana del navegador */
+    height: 90vh; /* Ajusta la altura de tu hero section */
+    margin: 5rem 0;
+    position: relative; /* Asegura que el contenedor pueda posicionar sus hijos correctamente */
+    overflow: hidden; /* Opcional: evita que el contenido se desborde del contenedor */
+    left: 50%; /* Moverlo hacia la izquierda */
+    right: 50%; /* Alinearlo hacia la derecha */
+    margin-left: -50vw; /* Corrección para moverlo fuera del contenedor */
+    margin-right: -50vw; /* Asegura que también se estire hacia la derecha */
+}
+
+
+
+
+
+
+
+@media (max-width: 1100px){
+    .hero{
+        background-size: cover; /* Asegura que la imagen cubra todo el área del div */
+        height: 75vh;
+    }
+}
+
+@media (max-width: 672px){
+    
+    .contenedor{
+        margin-top: 8rem;
+        width: 95%;
+    }
+    .container-1000{
+        width: 95%;
+    }
+    .project{
+        margin-top: 0rem;
+    }
+    .project__header{
+        align-items: start;
+        justify-content: left;
+    }
+    
+    .project__content {
+        grid-template-columns: 1fr; /* Make it one column */
+    }
+
+    /* Reorder the grid items so the second column comes first */
+    .technical-rider{
+        order: 2; /* Move the technical section below */
+        width: 100%; /* Make it take 100% width */
+    }
+
+    .summary {
+        order: 1; /* Move the summary section above */
+        width: 100%; /* Make it take 100% width */
+    }
+
+    .methodology__photo{
+        width: 25vh;
+    }
+    .carousel-container{
+        height: 50vh;
+    }
+
+    .parallex{
+        width: 100%;
+    }
+
+    .hero{
+        height: 50vh;
+    }
+    .contain{
+        background-size: contain;
+    }
+
+    .case-study__body{
+        grid-template-columns: 1fr;
+        padding: 0 2rem;
+    }
+    
+    
+    .case-study__body--summary{
+        order: 1;
+    }
+    .case-study__body--summary h3{
+        margin-top: 1rem;
+    }
+    .case-study__body--content{
+        order: 2;
+    }
+    .divider{
+        width: 4rem;
+    }
+}
+
+@media (max-width: 500px) {
+   .parallex{
+    min-height: 36vh;
+   }
+}
+
+@media (max-width: 460px) {
+   .divider{
+        display: none;
+   }
+   .case-study__header{
+    justify-content: left;
+   }
+   .case-study__header h2{
+    white-space:unset;
+    }
+    .parallex-container h2{
+        white-space: unset;
+    }
+
+}
+

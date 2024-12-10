@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>About me</title>
+    
+        <!-- Favicon -->
+        <link rel="icon" href="img/home/round.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="img/home/round.ico" type="image/x-icon">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- MY STYLES -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main_navigation.css">
+    
+        <!-- IBM PLEX SANS and Work Sans -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+</head>
+
+<body>
+
+    <!-- ADD HEADER -->
+    <div id="header"></div>
+
+
+    <!-- CONTENT -->
+
+    <div class="contenedor-about">
+
+        <div id="app">
+            <div class="about">
+                <animated-image data-image="/img/home/FOTO_perfil.jpg"></animated-image>
+        
+                <div class="about__info">
+                    <h2><span style="color: var(--primary);">Hola!</span></h2>
+                    <h1>It's Daniel.</h1>
+                    <div class="flex margin-top">
+                        <div class="inline-group">
+                            <p class="date">Location</p>
+                            <p class="location">Vienna, Austria</p>
+                        </div>
+                        <div class="tooltip">
+                            <i class="fa-sharp fa-regular fa-clipboard"></i>
+                            <span class="email" onclick="copyEmail('dngeap@gmail.com')" onmouseover="showTooltip()" onmouseout="hideTooltip()">
+                                dngeap@gmail.com
+                            </span>
+                            <span class="tooltiptext" id="tooltipMessage">copy email</span>
+                        </div>
+                    </div>
+        
+                    <p>
+                        Originally from Granada, in southern Spain.
+                        I'm a junior frontend developer 
+                        with a solid foundation in UX/UI design and creative media art projects.
+                        I'm passionate about building interactive and engaging digital experiences 
+                        that have a touch of personality. 
+                        I studied Information Science in Spain and completed a master's in Human-Computer
+                        Interaction (HCI) in Porto, Portugal. 
+                        I moved to Vienna in 2024 to start my career.
+                    </p>
+                    <p><span class="primary">Languages:</span> Spanish, English, German and Portuguese.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="services">
+            <h2>Field of work</h2>
+            <div class="service">
+                <h3>UX/UI Design</h3>
+                <p>algo corto</p>
+            </div>
+            <div class="service">
+                <h3>Front-end development</h3>
+                <p>algo corto</p>
+            </div>
+            <div class="service">
+                <h3>Creative coding</h3>
+                <p>algo corto</p>
+            </div>
+        </div> -->
+
+    
+
+        <div class="resume">
+            <!-- <h2>Resume</h2> -->
+            <button id="downloadBtn">Resume</button>
+        </div>
+
+        
+
+    </div>
+
+    <!-- ADD Footer -->
+    <footer>
+        <div class="socialmedia">
+            <a href="https://www.instagram.com/dnpgzl_/?hl=es" target="_blank">
+        <img src="img/instagram.png" width="38px" height="38px">
+            </a>
+        </div>
+        
+        <div class="socialmedia">
+            <a href="https://www.linkedin.com/in/daniel-gea-palenzuela-389a02177/" target="_blank">
+        <img src="img/linkedin.png" width="38px" height="38px">
+            </a>
+        </div>
+        
+        <div class="socialmedia">
+            <a href="https://github.com/dngea" target="_blank">
+        <img src="img/github.png" width="38px" height="38px">
+            </a>
+        </div>
+    
+        <div class="socialmedia">
+          <a href="https://vsco.co/dngea/gallery" target="_blank">
+      <img src="img/vsco.png" width="38px" height="38px">
+          </a>
+      </div>
+    
+      <button id="contactButton">Contact Me</button>
+        
+    </footer>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
+    <script src="js/main.js"></script>
+    <script src="js/animated_img.js"></script>
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Crear un enlace temporal
+            const link = document.createElement('a');
+            link.href = 'img/home/Daniel_Gea_Resume.pdf'; // Ruta del archivo que quieres descargar
+            link.download = 'Daniel_Gea_Resume.pdf'; // Nombre del archivo que se descargará
+            link.click(); // Simula el clic para descargar
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# Allow all bots to crawl the site
+User-agent: *
+
+# Disallow crawling of sensitive or unnecessary directories
+Disallow: /admin/
+Disallow: /components/
+Disallow: /scripts/
+Disallow: /private/
+
+# Allow crawling of everything else
+Allow: /
+
+# Specify the location of your sitemap
+Sitemap: sitemap.xml

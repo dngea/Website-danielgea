@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- OVERLAY -->
+    <div id="myNav" class="overlay">
+        <div class="overlay_border" id="overlayBorder">
+            <img src="img/burger.png" class="closebtn" onclick="closeNav()" height="30px" width="30px">
+            <div class="overlay-content">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="silversunproject.htm">Silversun Pickups</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="news.html">Last News</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled">Shop</a>
+                        </li>
+                    </ul>
+                
+            </div>
+        </div>
+    </div>
+
+<!-- MAIN PAGE -->
+
+      <div class="main_page_common">
+          <div class="header_common">
+            <img src="img/burger.png" onclick="openNav()" height="30px" width="30px" class="burger">
+            <div class="bg_burger"></div>
+            <div class="title_common">About Us</div>
+            <div class="info_common">Silversun Pickups is an American alternative rock band from Los Angeles that was formed in 2000. The band is composed of Brian Aubert, Nikki Monninger and Christopher Guanlao.<br>
+              The band released their debut EP, Pikul, in July 2005, and their debut album, Carnavas, on July 26, 2006. Their second album, Swoon, was released on April 14, 2009 and much more...</div>
+        </div>
+
+
+<!-- CARDS CONTAINER BOOTSTRAP -->
+        <div class="cards_container">
+            <div class="card" style="width: 18rem;">
+                <img src="img/member1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Brian</h4>
+                  <p class="card-text">The Silversun Pickups vocalist-guitarist doesn't sound like Pearl Jam's iconic singer. "I don't mind hearing that since I get that a lot," Aubert said.</p>
+                  <a href="https://www.discogs.com/es/artist/579615-Brian-Aubert" class="btn btn-primary" target="blank">Find more about!</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="img/member2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Nikki</h4>
+                  <p class="card-text">I get nervous playing live, so I like to practice the songs a million times before we hit the road. Right now that's the mode I've been in.</p>
+                  <a href="https://www.discogs.com/es/artist/579614-Nikki-Monninger" class="btn btn-primary" target="blank">Find more about!</a>
+                </div>
+              </div>
+
+              <div class="card" style="width: 18rem;">
+                <img src="img/member3.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h4 class="card-title">Christopher</h4>
+                  <p class="card-text">It's Guan “laow”, you wouldn't believe the many ways I've heard it said, thanks for asking!</p>
+                  <a href="https://www.drumeo.com/beat/chris-guanlao-interview-drumeogab-podcast-151/" class="btn btn-primary" target="blank">Find more about!</a>
+                </div>
+              </div>
+          </div>
+
+          <div class="members_about">
+            <p>
+              You can play the audio below and let yourself get involved with some of our background noise we usually have.<br>
+              We have a band amnesia that keeps us from looking at the past,” lead singer Brian Aubert tells Rolling Stone. “It's not conscious, it's just how we operate. All these songs are just a part of our fabric and we perform them all often, which keeps them current. So we have modern memories attached to them as well as the historical ones.”
+              
+            </p>
+            
+<!-- AUDIO -->
+            <audio controls autoplay muted>
+              <source src="audio/audio1.mp3" type="audio/ogg">
+              <source src="audio/audio1.mp3" type="audio/mpeg">
+            </audio>
+          
+          </div>
+
+
+<!-- FOOTER -->
+          <div class="reveal_footer">
+            Desing by: Daniel Gea Palenzuela.<br>
+            Subject: Producción y Difusión de Información Digital.
+        </div>
+    </div>
+    
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --primary: #A44200;
+    --background: #FFF4E9;
+  
+    --main-font: 'IBM Plex sans', system-ui;
+    --paragraph-font: 'Work Sans', system-ui;
+  }
+
+  html{
+    font-size: 10px;
+  }
+
+
+  h1{
+    font-size: 6rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--background);
+    letter-spacing: 0.25rem;
+  }
+
+  h2{
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--background);
+    letter-spacing: 0.25rem;
+  }
+  
+  h3{
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: var(--main-font);
+    color: var(--primary);
+    letter-spacing: 0.25rem;
+  }
+
+  p{
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    color: var(--background);
+    letter-spacing: 0.2rem;
+  }

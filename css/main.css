@@ -1,0 +1,642 @@
+:root{
+    --black: #000000;
+    --white: #ffffff;
+    --primary: #A44200;
+    --background: #FFF6EE;
+    /* --background: #FFF4E9; */
+  
+    --main-font: 'IBM Plex sans', system-ui;
+    --paragraph-font: 'Work Sans', system-ui;
+
+    --max-width: 1200px;
+  }
+
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin:0;
+    padding: 0;
+    min-width: 100%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}  
+
+body{ 
+    font-family: var(--paragraph-font);
+    background-color: var(--background);
+    margin: 0 auto;
+    width: inherit;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--black);
+    letter-spacing: 0.25rem;
+}
+
+h2{
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--black);
+    letter-spacing: 0rem;
+}
+
+h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--black);
+    letter-spacing: 0rem;
+}
+
+h4{
+    font-size: 1.25rem;
+    font-weight: bold;
+    font-family: var(--main-font);
+    color: var(--black);
+    letter-spacing: 0rem;
+}
+
+p{
+    font-family: var(--paragraph-font);
+    font-size: 1rem;
+    color: var(--black);
+    letter-spacing: 0.75px;
+    line-height: 2rem;
+    text-align:left;
+    padding-top: 2rem;
+    font-weight:400;
+}
+
+a{ 
+    text-decoration: none;
+    list-style: none;
+}
+
+.italic{
+    font-style: italic;
+}
+.primary{
+    color: var(--primary);
+    font-weight: 600;
+}
+.bold{
+    font-weight: 600;
+}
+.date{
+    color: var(--primary);
+    padding: 0 1rem 0 0;
+}
+.location{
+    background-color: var(--primary);
+    color: var(--background);
+    padding: 0 1rem;
+}
+
+/* BODY--------------- */
+
+.contenedor{
+    max-width: var(--max-width);
+    display: flex;
+    margin: 0 auto;
+    padding: 3rem 0;
+    margin-top: 0rem;
+    overflow:visible;
+}
+
+.page__description{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    padding: 2rem 2rem;
+    margin:0 1rem;
+}
+
+.page__showProjects{
+    width: 65%;
+    min-width: 0;
+    height: 100%;
+    padding: 2rem 0;
+    margin:0;
+}
+
+.description{
+    padding: 2rem 0 0;
+}
+
+
+.grid_responsive {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas grandes */
+    gap: 0; /* Sin márgenes entre las tarjetas */
+    width: 100%; /* Ocupar el 100% del contenedor */
+    max-width: 1200px; /* Limitar el ancho máximo */
+}
+
+
+.card {
+    position: relative;
+    transition: 0.3s;
+    width: 100%; /* Ocupar todo el ancho del contenedor */
+    padding-bottom: 100%; /*Mantener un aspecto cuadrado*/
+    overflow: hidden; /* Para que el contenido no desborde */
+    background-color: #e4e4e4;
+}
+
+.card img {
+    position: absolute; /* Posicionar la imagen en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho */
+    height: 100%; /* Asegura que la imagen ocupe todo el alto */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    display: block; /* Elimina espacios extra debajo de la imagen */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, 
+                transform 0.3s ease;
+}
+
+.card__container {
+    position: absolute; /* Para superponer el texto sobre la imagen */
+    top: 0; /* Coloca el texto en la parte superior */
+    left: 0;
+    right: 0;
+    bottom: 0; /* Asegura que el texto cubra toda la tarjeta */
+    background: #a44200df; /* Fondo oscuro para el texto */;
+    color: var(--primary);
+    display: flex; /* Para centrar el texto */
+    flex-direction: column; /* Centra el texto en vertical */
+    justify-content: center; /* Centra el texto en vertical */
+    align-items: start; /* Centra el texto en horizontal */
+    transition: opacity 0.3s ease;
+    opacity: 0; /* Inicialmente oculto */
+    padding: 4rem; /* Espaciado alrededor del texto */
+}
+
+.card__container *{
+    color: var(--background);
+    padding: 0.5rem 0;
+}
+.card__container p{
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+}
+
+.card__container h4{
+    margin-top: 2rem;
+
+}
+
+.card:hover img{
+    filter: grayscale(0%);
+    transform: scale(1.3); /* Aumenta la imagen un 5% al hacer hover */
+}
+
+.card:hover .card__container {
+    opacity: 1; /* Muestra el texto al hacer hover */
+}
+
+
+
+
+
+/* ABOUT & CONTACT */
+
+.flex{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.margin-top{
+    margin-top: 2rem;
+}
+.inline-group{
+    display: flex;
+    align-items: center; 
+    gap: 1rem;
+    
+}
+.inline-group .location{
+    margin: 0;
+}
+.inline-group .date{
+    padding: 0;
+    margin: 0;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    width: auto;
+}
+.tooltip .tooltiptext {
+visibility: hidden; /* Cambiar a hidden por defecto */
+font-weight: 400;
+width: auto;
+font-size: 0.9rem;
+white-space: nowrap;
+background-color: #383838;
+color: var(--background);
+text-align: center;
+border-radius: 6px;
+padding: 5px;
+position: absolute;
+z-index: 1;
+bottom: 150%;
+left: 30%;
+margin-left: -75px;
+opacity: 0;
+transition: opacity 0.3s, visibility 0s linear 0.3s; /* Retrasar la visibilidad hasta que la opacidad sea 0 */
+}
+
+.tooltip .tooltiptext::after {
+content: "";
+position: absolute;
+top: 100%;
+left: 50%;
+margin-left: -5px;
+border-width: 5px;
+border-style: solid;
+border-color: #383838 transparent transparent transparent; /* Triángulo */
+}
+
+/* Mostrar el tooltip cuando tenga la clase 'show' */
+.tooltip .tooltiptext.show {
+visibility: visible;
+opacity: 1;
+transition: opacity 0.3s; /* Mostrar con opacidad suave */
+}
+
+/* Estilo para el correo electrónico (como botón) */
+.email {
+cursor: pointer;
+border: none;
+color: var(--black);
+font-size: 16px;
+border-radius: 4px;
+}
+.email:hover{
+    color: #2f2f2f;
+    font-weight: 500;
+}
+.email:active{
+    color: #696969;
+}
+
+
+
+
+
+
+
+.contenedor-about{
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 4rem 0;
+    margin-top: 1rem;
+    overflow:visible;
+}
+
+.about{
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 75%;
+    margin: 0 auto;
+}
+.about__img {
+    width: 100%; 
+    display: flex;
+    justify-content: center; /* Mantiene la alineación a la derecha */
+    align-items: start; /* Cambiado a flex-start para alinear la imagen en la parte superior */
+    padding: 1rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    perspective: 1000px; /* Creates a 3D space */
+    
+}
+
+.about__img img {
+    max-width: 100%; 
+    min-height: 100%; /*Mantiene la proporción de la imagen */
+    display: block; /* Elimina el espacio inferior que suelen tener los <img> */
+    object-fit: cover;
+    transition: transform 0.2s ease;
+    will-change: transform; /* Improves performance */    
+    border-radius: 10px;
+    border: var(--background) 2px solid; 
+}
+.about__img img:hover{
+    border: var(--background) 2px solid; 
+    box-shadow: #d6a485 1px 1px 50px;
+
+}
+
+.about__info{
+    padding: 1rem; /* Añade un poco de padding para mejorar la legibilidad */
+    width: 100%;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
+}
+.services{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    flex-wrap: wrap;
+}
+.services h2{
+    width: 100%;
+    height: 5rem;
+    text-align: center;
+}
+.service{
+    gap: 5rem;
+}
+
+.resume{
+    width: 100%;
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.resume h2, .resume button{
+    margin: 1rem;
+}
+
+button {
+    background-color: #A44200;
+    color: var(--background);
+    border: none;
+    padding: 12px 35px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+button:hover {
+    background-color: #833704; /* Slightly lighter shade on hover */
+}
+
+button:active {
+    background-color: #642510; /* Darker shade when clicked */
+}
+
+.contact-form-container {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #A44200; /* Highlight color */
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #A44200; /* Highlight color */
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #c75309; /* Slightly darker shade */
+}
+
+.contact-form button:active {
+    background-color: #833015; /* Even darker shade */
+}
+
+
+
+
+footer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 2.5rem;
+    width: auto;
+    width: 100%;
+    background-color: var(--black);
+  }
+  
+  footer .socialmedia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 11px;
+    width: 38px;
+    height: 38px;
+    opacity: 0.9;
+    transition: 0.2s;
+  }
+  footer .socialmedia img{
+    border-radius: 4px;
+    width: 38px;
+    height: 38px;
+  }
+  footer .socialmedia:hover{
+    opacity: 0.6;
+  }
+  footer button{
+    background-color: #a4420000; /* Highlight color */
+    color: var(--primary);
+    border: none;
+    padding: 1.25rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 0rem;
+    transition: all 0.3s ease;
+  }
+  footer button:hover{
+    background-color: #a4420000; /* Highlight color */
+    color: var(--primary);
+    opacity: 0.7;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE DESIGN: Primero de mayor a menor en estrategia de "max". */
+@media (max-width: 1300px){
+    .contenedor{
+        width: 90%;
+    }
+}
+
+@media (max-width: 1100px){
+    .contenedor{
+        width: 80%;
+        flex-direction: column;
+    }
+    .page__description{
+        width: 100%;
+        padding: 0;
+        margin-bottom: 5rem;
+        margin: 0;
+    }
+    .page__showProjects{
+        width: 100%;
+    }
+    .card__container p{
+        line-height: 1.25rem;
+    }
+   
+}
+
+@media (max-width: 800px) {
+    .contenedor-about{
+        margin-top: 10vh;
+    }
+
+    .about {
+        grid-template-columns: 1fr; /* Cambia a una sola columna para la disposición vertical */
+        grid-template-rows: auto auto; /* Ajusta las filas automáticamente */
+    }
+
+    .about__img {
+        order: 1; /* Coloca la imagen primero */
+        height: 50vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .about__img img{
+        
+        height: 100%
+    };
+
+    .about__info {
+        order: 2; /* Coloca el texto después de la imagen */
+    }
+    .resume{
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 672px) {
+    .contenedor{
+        width: 80%;
+        margin-top: 10vh;
+    }
+    .grid_responsive {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+    }
+
+    .card__container {
+        position: static; /* Coloca el texto bajo la imagen en móviles */
+        opacity: 1; 
+        background: var(--primary);
+        padding: 15px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: start;
+        justify-content: center;
+    }
+    .card{
+        padding-bottom: 0%;
+        margin-bottom: 15%;
+        border-radius: 0px;
+    }
+
+    .card img {
+        position: relative; /* Cambio a posición relativa en móviles */
+        height: auto; /* Altura automática para mantener proporciones */
+        max-height: 350px;
+        min-height: 300px;
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+        filter: grayscale(0%);
+    }
+    .card:hover img{
+        transform: scale(1); /* Aumenta la imagen un 5% al hacer hover */
+    }
+
+    footer{
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+    footer .socialmedia{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom:1rem;
+        opacity: 0.9;
+        transition: 0.2s;
+      }
+    footer .socialmedia img{
+        width: 38px;
+        height: 38px;
+      }
+    footer button{
+        width: 70%;
+        margin-top:8rem;
+        margin:0;
+      }
+
+    
+
+
+}
+
+
+
+
+

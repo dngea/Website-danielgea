@@ -1,0 +1,184 @@
+
+ /* --- QUIEN HABLA DE TI --- */
+
+*{
+    margin:0;
+    padding: 0;
+    font-family: "Raleway";
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    
+    box-sizing: border-box;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    margin:0;
+    padding: 0;
+    min-width: 100%;
+}
+
+body {
+    background-color: rgb(30,30,30);
+    font-family: "Raleway";
+}
+
+
+.container{
+    width: 100%;
+    max-width: 1500px;
+}
+
+.header{
+    width: 85%;
+    margin: 30px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: center;
+    background-color: rgb(28,28,28);
+    border-radius: 5px;
+}
+.titulo {
+    font-size: 250%;
+    font-family: "Liberation Mono";
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: rgb(230,230,230);
+    width: 40%;
+    padding-left: 30px;
+    border-left: 5px solid rgb(180,180,180);
+    border-top: 5px solid rgb(180,180,180);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.texto-presentacion{
+    color: rgb(190,190,190);
+    font-size: 15px;
+    text-align: justify;
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-right: 5px solid rgb(180,180,180);
+    border-bottom: 5px solid rgb(180,180,180);
+    border-radius: 2px;
+}
+
+.galeria{
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: rgb(24,24,24);
+}
+
+img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 3px;
+}
+
+.img1{
+    margin-bottom: 40px;
+    width: 39.2%;
+    padding: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img2{
+    margin-bottom: 40px;
+    width: 59%;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer{
+    width: 90%;
+    padding: 3%;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    background-color: rgb(28,28,28);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.footer .texto-fin{
+    text-align: center;
+    color: rgb(230,230,230);
+    font-size: 18px;
+}
+.footer .video-final{
+    display: flex;
+    justify-content:center;
+    padding: 2%;
+    width: 50%;
+}
+
+.footer .video-final iframe{
+    object-fit: contain;
+}
+
+.separation{
+    display: none;
+    visibility: hidden;
+}
+
+/*RESPONSIVE*/
+
+@media (max-width:850px){
+    .header{
+        flex-direction: column;
+        }
+    .titulo{
+        width: 100%;
+        text-align: right;
+        justify-content: flex-end;
+        padding-right: 30px;
+    }
+    .texto-presentacion{
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .img1{
+        margin: 5px auto;
+        width: 80%;
+    }
+    .img2{
+        margin: 5px auto;
+        width: 80%;
+        padding: 2%;
+    }
+    
+    .galeria{
+        flex-direction: column;
+    }
+    .line-white{
+        border: 2px solid rgb(150,150,150);
+        background-color: rgb(150,150,150);
+        border-radius: 5px;
+        width: 50%;
+        margin: 30px auto;
+}
+    .separation{
+    display:block;
+    visibility: visible;
+    border:2px solid rgb(210,210,210);
+    border-radius: 5px;
+    background-color: rgb(210,210,210);
+    margin: 8% auto;
+    width: 80%;
+}
+}

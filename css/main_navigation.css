@@ -1,0 +1,271 @@
+:root{
+    --dark: #000000;
+    --primary: #A44200;
+    --secondary: #ffffff;
+    --background: #FFF6EE;
+    /* --background: #FFF4E9; */
+
+    --main-font: 'IBM Plex sans', system-ui;
+    --paragraph-font: 'Work Sans', system-ui;
+
+    --max-width: 1200px;
+  }
+
+html {
+    font-size: 14px; /* Ajusta según tus necesidades */
+    font-family: var(--main-font);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav{
+    height: 10vh;
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--background);
+    z-index: 1;
+    padding: 0 5rem;
+    border-bottom: var(--background) 0.1rem solid;
+    z-index: 5;
+}
+.nav--width{
+    max-width: var(--max-width);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav__ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav .nav__ul .nav__li{
+    height: 100%;
+    width: 10rem;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--main-font);
+    color: var(--background);
+    font-size: 0.8rem;
+    font-weight:500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin-right: 0.1rem;
+}
+
+.nav .nav__ul .nav__li:hover{
+    background-color: var(--primary);
+    transition: 0.3s;
+    height: 100%;
+}
+
+.nav .nav__ul .nav__li a {
+    text-decoration: none;
+    color: var(--dark);
+}
+
+.logo{
+    height: 100%;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    color: var(--primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.logo:hover{
+    cursor: pointer;
+}
+
+
+.nav .nav__ul .nav__li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+/* OVERLAY MENUS */
+
+.block{
+    display: block;
+}
+
+.burger{
+    visibility: hidden;
+    display: none;
+}
+.logo--overlay{
+    visibility: hidden;
+    display: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.25rem;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+}
+
+.overlay{
+    width: 100%;
+    height: 0vh;
+    visibility: hidden;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 3;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: 0.6s ease-in-out;   
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+
+}
+.overlay-content {
+    width: 100%;
+    position: relative;
+    top: 0;
+    text-align: center;
+    margin:0;
+    padding: 0;
+}
+.overlay-content .nav__li{
+    width: 100%;
+    padding: 2.5rem 6rem;
+    font-family: var(--main-font);
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+.overlay-content .nav__li a:hover{
+    color: var(--primary);
+}
+.overlay .closebtn {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    top: 2.7rem;
+    right: 4rem;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.788);
+    z-index: 2;
+    cursor: pointer;
+  }
+  .closebtn:hover{
+    content: url("../img/nav/burger-hover.png");
+  }
+
+
+
+
+
+
+
+@media (max-width: 960px) {
+    .nav{
+        padding: 0 0 0 2rem;
+    }
+    .nav .nav__ul{
+        margin-right: 1rem;
+    }
+    .nav .nav__ul .nav__li{
+        width: 8rem;
+        padding: 0.5rem;
+        margin-right: 0rem;
+    }
+    .overlay{
+        max-width: 960px;
+    }
+    .overlay-content{
+        max-width: 960px;
+    }
+
+}
+
+@media (max-width: 672px) {
+
+    .nav{
+        padding: 0 2.5rem;
+        background-color: var(--dark);
+        position: fixed; /* Fija el header para que se quede en la parte superior */
+        top: 0;
+        left: 0;
+    }
+    ul{
+        list-style: none;
+    }
+    .nav--width{
+        position: relative;
+        justify-content: center;
+    }
+   .burger{
+        visibility: visible;
+        display: block;
+        width: 30px;
+        height: 20px;
+        position: absolute;
+        top: 1.35rem;
+        right: 2rem;
+        cursor: pointer;
+        z-index: 3;
+   }
+   .burger img{
+        width: 100%;
+   }
+   .burger:hover > img{
+        content: url("../img/nav/burger-hover.png");
+   }
+   .overlay{
+    max-width: 672px;
+   }
+   .overlay-content{
+    max-width: 672px;
+    }
+
+   .nav__ul{
+        visibility: hidden;
+   }
+   .nav__ul .nav__li{
+        display: none;
+   }
+   .logo{
+    visibility: hidden;
+   }
+   .logo--overlay{
+        visibility: visible;
+        display: flex;
+        position: fixed;
+        top: 3rem;
+        left: 3rem;
+        z-index: 4;
+        font-size: 1.5rem;
+        font-weight: bold;
+        letter-spacing: 0.25rem;
+        color: var(--primary);
+   }
+}
+
+.current-page{
+    background-color: var(--primary);
+}
+
+@media (max-width: 500px) {
+
+    html {
+        font-size: 13px;
+    }
+}
