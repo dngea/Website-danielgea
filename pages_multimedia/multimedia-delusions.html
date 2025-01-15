@@ -50,11 +50,12 @@
                 <div class="technical-rider">
                     <h2>Technical Rider</h2>
                     <h4 class="primary">Tasks</h4>
-                    <p>These</p>
+                    <p>Computer Vision</p>
+                    <p>Reactive Visuals</p>
                     <h4 class="primary">Timeline</h4>
-                    <p>those</p>
-                    <h4 class="primary">Additional Info</h4>
-                    <p>those</p>
+                    <p>6 weeks</p>
+                    <!-- <h4 class="primary">Additional Info</h4>
+                    <p>those</p> -->
                 </div>
 
                 <div class="summary">
@@ -80,18 +81,7 @@
     </div>
     <!-- //Project Introduction -->
 
-    <!-- Methodology -->
-    <div class="parallax page-multimedia">
-        <div class="parallax-bg"></div>
-        <div class="parallax-text">
-            <h3>Methodology</h3>
-            <h2>Double Diamond</h2>
-            <div class="methodology__photo">
-                <img src="../img/home/diamond.png" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- //Methodology -->
+    
 
     <!-- Case Study Description -->
     <div class="container-1000">
@@ -104,14 +94,28 @@
             <div class="case-study__body">
                 <div class="case-study__body--summary">
                     <h3>Goals</h3>
-                    <p>User research</p>
-                    <p>Trends</p>
+                    <p>Immersive audio-visual performance</p>
+                    <p>Reactive visuals</p>
+                    <p>Real-time synchronization</p>
                 </div>
                 <div class="case-study__body--content">
-                    <h3>Brainstorming</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus rem, placeat repellat fugit voluptates est culpa eos necessitatibus quis amet nesciunt odio nemo expedita saepe accusamus facere ipsa et.</p>
-                    <h3>Research</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusamus necessitatibus quae fuga? Provident, neque pariatur amet, velit voluptatibus inventore laboriosam quisquam totam ipsum aspernatur minima odio necessitatibus voluptates harum?</p>
+                    <h3>Context</h3>
+                    <p>
+                        This project is an immersive VJ performance that combines gloomy, dreamy music with visually fitting, dynamic visuals. The performance aims to evoke a sense of nostalgia and obscurity, using black and white, sharp, and architectural photographs paired with trippy, distorted visuals. The overall aesthetic is built around creating a dreamlike atmosphere with visuals that react to the rhythm of snares, kicks, and varying frequencies in the music.
+                    </p>
+                    <p>
+                        The performance involves seamless integration of multiple mediums and technologies: computer, projector, speakers, and mixing software like Virtual DJ or Mixxx to control the audio, while TouchDesigner is used to generate real-time visuals. The visuals evolve to become more colorful, liquid-like, and bright, complementing the shifting mood of the music. The visuals interact with the audience, becoming more distorted and trippy as the performance progresses. The goal is to create a cohesive, immersive experience where both the sound and visuals work together to enhance the emotional depth of the performance.
+                    </p>
+        
+                    <h3>Challenges</h3>
+                    <p>Several challenges arose during the project:</p>
+                    <ul>
+                        <li><strong>Audio-Visual Synchronization:</strong> Maintaining real-time synchronization between the audio and visuals, ensuring that each visual reacts accurately to the correct frequency, beat, or movement.</li>
+                        <li><strong>Complexity of Interactivity:</strong> Balancing the interactive nature of visuals (reacting to both audio and motion) with the need for seamless transitions between different visual states.</li>
+                        <li><strong>Camera Motion Detection:</strong> Accurately detecting camera input and mapping it to the correct visual reactions, such as the movement of squares or the generation of white blocks around a person’s silhouette.</li>
+                        <li><strong>Dynamic Control Management:</strong> Managing multiple controls (sliders, main switch, alpha fade, etc.) effectively during a live performance, ensuring smooth transitions and intuitive operation.</li>
+                        <li><strong>Network Latency for OSC Communication:</strong> Minimizing the potential lag or delay in OSC communication between the mobile app and TouchDesigner, ensuring real-time responsiveness to user input.</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -119,20 +123,35 @@
         <div class="case-study">
             <div class="case-study__header">
                 <div class="divider"></div>
-                <h2><span class="primary">Phase 2.</span> Define</h2>
+                <h2><span class="primary">Phase 2.</span> Research</h2>
                 <div class="divider"></div>
             </div>
             <div class="case-study__body">
                 <div class="case-study__body--summary">
-                    <h3>Goals</h3>
-                    <p>User research</p>
-                    <p>Trends</p>
+                    <h3>References</h3>
+                    <p>Influences</p>
                 </div>
                 <div class="case-study__body--content">
-                    <h3>Brainstorming</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus rem, placeat repellat fugit voluptates est culpa eos necessitatibus quis amet nesciunt odio nemo expedita saepe accusamus facere ipsa et.</p>
                     <h3>Research</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusamus necessitatibus quae fuga? Provident, neque pariatur amet, velit voluptatibus inventore laboriosam quisquam totam ipsum aspernatur minima odio necessitatibus voluptates harum?</p>
+                    <p>For the visual and auditory inspiration for the performance, I turned to several sources that matched the aesthetic and mood I wanted to evoke in the piece. Some of the most important references include:</p>
+                    
+                    <h4>Visual References</h4>
+                    <ul>
+                        <li><strong>"Aphex Twin Live Visuals" by Weirdcore</strong> – A highly influential visual artist whose work has shaped my approach to creating sharp, architectural, and black-and-white visuals. <a href="https://youtu.be/961uG4Ixg_Y?t=1275" target="_blank">Watch here</a></li>
+                        <li><strong>Sharp, Architectural, Black & White Aesthetic</strong> – An aesthetic that I wanted to incorporate in my visuals. The combination of bold contrasts and geometric forms enhances the feeling of surrealism. <a href="https://youtu.be/jKx8FFRrlN0?t=13" target="_blank">Watch here</a></li>
+                    </ul>
+        
+                    <h4>Music References</h4>
+                    <p>The music was a major influence in setting the tone of the project, and I curated a playlist of tracks that captured the desired vibe of dreamy, melancholy, and atmospheric sounds:</p>
+                    <ul>
+                        <li><strong><a href="https://www.youtube.com/watch?v=asl0p5Hwbg0&ab_channel=MolchatDoma-Topic" target="_blank">Molchat Doma – Я Не Коммунист</a></strong></li>
+                        <li><strong><a href="https://www.youtube.com/watch?v=HR5zpFs7YpY&ab_channel=TV-8-301" target="_blank">Molchat Doma – Sudno</a></strong></li>
+                        <li><strong><a href="https://www.youtube.com/watch?v=1msjk6K1Bss&ab_channel=TV-8-301" target="_blank">Молчат Дома– Volny</a></strong></li>
+                        <li><strong><a href="https://www.youtube.com/watch?v=V1l6kxQNq54&ab_channel=faerie" target="_blank">Mareux - The Perfect Girl</a></strong></li>
+                        <li><strong><a href="https://www.youtube.com/watch?v=yNVTqgUrJnM&ab_channel=BoyHarsher" target="_blank">Boy Harsher - Give Me a Reason</a></strong></li>
+                        <li><strong><a href="https://www.youtube.com/watch?v=FYH8DsU2WCk&ab_channel=jrrr90" target="_blank">New Order - Blue Monday</a></strong></li>
+                        <li><strong><a href="https://www.youtube.com/watch?v=HR5zpFs7YpY&ab_channel=TV-8-301" target="_blank">Molchat Doma – Sudno (repeat)</a></strong></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -140,44 +159,51 @@
         <div class="case-study">
             <div class="case-study__header">
                 <div class="divider"></div>
-                <h2><span class="primary">Phase 3.</span> Develop</h2>
+                <h2><span class="primary">Phase 3.</span> Results</h2>
                 <div class="divider"></div>
             </div>
             <div class="case-study__body">
                 <div class="case-study__body--summary">
                     <h3>Goals</h3>
-                    <p>User research</p>
-                    <p>Trends</p>
+                    <p>Audiovisual performance</p>
+                    <p>Dynamic visuals</p>
+                    <p>Immersive experience</p>
+                    <p>TouchDesigner</p>
+                    <p>OSC mobile app</p>
                 </div>
                 <div class="case-study__body--content">
-                    <h3>Brainstorming</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus rem, placeat repellat fugit voluptates est culpa eos necessitatibus quis amet nesciunt odio nemo expedita saepe accusamus facere ipsa et.</p>
-                    <h3>Research</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusamus necessitatibus quae fuga? Provident, neque pariatur amet, velit voluptatibus inventore laboriosam quisquam totam ipsum aspernatur minima odio necessitatibus voluptates harum?</p>
+                    <h3>Visual Reactions to Audio</h3>
+                    <ul>
+                        <li><strong>First Visual (Building Reacts to Overall Sound Input):</strong> The building’s form reacts to the frequency spectrum, driving a fluid, immersive visual transformation.</li>
+                        <li><strong>Second Visual (White Squares Reacting to Camera Input):</strong> White squares react to camera input, moving based on detected motion and synchronizing with low frequencies.</li>
+                        <li><strong>Third Visual (Big Black and White Cube):</strong> The cube rotates and zooms based on audience movement and music rhythm.</li>
+                        <li><strong>Fourth Visual (Black and White People – Movement and Feedback):</strong> White blocks grow out of a person’s silhouette, creating continuous interaction.</li>
+                        <li><strong>Fifth Visual (Black and White Bright Blur):</strong> The blur effect pulses in sync with high-frequency beats.</li>
+                        <li><strong>Sixth Visual (Grains and Feathers – Kick and Rhythm Snares):</strong> Grainy textures react to kick drums and snares, adding an organic, rhythmic visual texture.</li>
+                        <li><strong>Seventh Visual (Colorful Liquid – Kick, Snares, Medium Frequencies):</strong> Liquid-like visuals respond to kick drums, snares, and medium frequencies, creating fluid, colorful animations.</li>
+                    </ul>
+        
+                    <h3>Controls within TouchDesigner</h3>
+                    <ul>
+                        <li><strong>Offset (1st Visual):</strong> Controls waveform offset, affecting visual evolution.</li>
+                        <li><strong>Scale (1st Visual):</strong> Adjusts line thickness in the building structure.</li>
+                        <li><strong>Light Size (5th Visual):</strong> Controls the size of the rhythmic blur effect.</li>
+                        <li><strong>Grains (6th Visual):</strong> Adjusts the graininess in the feather visual based on rhythm.</li>
+                        <li><strong>Liquid Size (7th Visual):</strong> Alters the size of liquid waves for dynamic movement.</li>
+                        <li><strong>Main Switch:</strong> Toggles between visual effects, enabling overlapping visuals.</li>
+                        <li><strong>Alpha:</strong> Fade-in/fade-out slider for smooth visual transitions.</li>
+                    </ul>
+        
+                    <h3>OSC Controls via Mobile Device</h3>
+                    <p>The mobile app, **OSC Controller for Android**, is used to control the second visual (white squares) in real-time:</p>
+                    <ul>
+                        <li><strong>Slider 1 (Resolution Control):</strong> Controls the number of squares, enhancing visual detail.</li>
+                        <li><strong>Slider 2 (Interaction Control):</strong> Alters the interaction between the squares and the subject’s movement or silhouette mapping.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <div class="case-study">
-            <div class="case-study__header">
-                <div class="divider"></div>
-                <h2><span class="primary">Phase 4.</span> Deliver</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="case-study__body">
-                <div class="case-study__body--summary">
-                    <h3>Goals</h3>
-                    <p>User research</p>
-                    <p>Trends</p>
-                </div>
-                <div class="case-study__body--content">
-                    <h3>Brainstorming</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet minus rem, placeat repellat fugit voluptates est culpa eos necessitatibus quis amet nesciunt odio nemo expedita saepe accusamus facere ipsa et.</p>
-                    <h3>Research</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum accusamus necessitatibus quae fuga? Provident, neque pariatur amet, velit voluptatibus inventore laboriosam quisquam totam ipsum aspernatur minima odio necessitatibus voluptates harum?</p>
-                </div>
-            </div>
-        </div>
+        
     </div>
 
 

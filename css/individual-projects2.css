@@ -24,6 +24,7 @@ p{
 }
 
 
+
 .contenedor{
     flex-direction: column;
     width: 100%;
@@ -163,7 +164,7 @@ p{
 
 .parallax {
     position: relative;
-    min-height: 1100px;
+    min-height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -310,6 +311,14 @@ p{
     margin-right: -50vw; /* Asegura que también se estire hacia la derecha */
 }
 
+
+.case-study__images{
+    width: 100%;
+    
+}
+img {
+    width: 100%;
+}
 
 
 
