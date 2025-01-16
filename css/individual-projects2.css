@@ -320,6 +320,14 @@ img {
     width: 100%;
 }
 
+.custom-audio {
+    width: 100%; /* Full width */
+    border-radius: 20px; /* Rounded corners */
+    padding: 0; /* Inner padding for spacing */
+    margin: 1rem 0;
+    outline: none; /* Remove outline */
+    background-color: #e5e5e5
+  }
 
 
 

@@ -16,7 +16,7 @@
         <!-- <link rel="stylesheet" href="../css/css_individualProjects.css"> -->
         <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/main_navigation.css">
-        <link rel="stylesheet" href="../css/individual-projects2.css?v=1.0.2">
+        <link rel="stylesheet" href="../css/individual-projects2.css?v=1.0.3">
 
         <!-- IBM PLEX SANS and Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,8 +64,8 @@
                     <h4 class="primary">Timeline</h4>
                     <p>4 weeks</p>
                     <h4 class="primary">Links</h4>
-                    <a href="#"><p>Video prototype</p></a>
-                    <a href="#"><p>Pure data patch</p></a>
+                    <a href="https://drive.google.com/file/d/1we_mYO_8WAB17_V0gtX6uuCGjK5_uAfE/view?usp=sharing" target="_blank"><p>Video demo performance</p></a>
+                    <a href="https://github.com/dngea/metamorfosis-audiovisual-reactive-performance" target="_blank"><p>Pure data patch</p></a>
                 </div>
 
                 <div class="summary">
@@ -163,6 +163,10 @@
                     </ul>
                     <p>This approach allowed for intuitive, real-time control of multiple variables, enabling seamless coordination across the audio and visual elements of the performance.</p>
 
+                    <div class="case-study__images">
+                        <img src="/img/multimedia/metamorfosis/slider.png" alt="Slider control in Processing" />
+                    </div>
+
                     <h3>OSC</h3>
                     <p>Some of the libraries I was looking at were <strong>oscP5</strong>, <strong>controlP5</strong>, <strong>mrPeach</strong>, and the OSC library (found in the browser of PD). For Processing, the first two libraries were important to start sending values with OSC.</p>
                     <p>The first OSC syntax I tried, using mrPeach and routeOSC, was working but not consistently. I had to repeatedly open and close PD for it to properly read the objects. Eventually, I decided to explore other alternatives.</p>
@@ -172,6 +176,10 @@
                         <li>Streamlined the workflow by avoiding repetitive setup processes.</li>
                     </ul>
                     <p>By implementing this method, I could successfully send and read messages between Processing and PD.</p>
+
+                    <div class="case-study__images">
+                        <img src="/img/multimedia/metamorfosis/osc.png" alt="Netreceive OSC Pure data" />
+                    </div>
 
                     <h3>Pure Data</h3>
                     <p>The performance is divided into <strong>four chapters</strong>, each representing a distinct phase of the metamorphosis:</p>

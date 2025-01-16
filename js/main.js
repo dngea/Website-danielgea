@@ -8,15 +8,38 @@ function openNav() {
     document.getElementById("overlay_nav").style.visibility = "hidden";
   }
 
-const light = document.querySelector('.light');
+  const light = document.querySelector('.light');
 
-document.addEventListener('mousemove', (e) => {
-  const x = e.clientX;
-  const y = e.clientY;
-  light.style.left = `${x}px`;
-  light.style.top = `${y}px`;
-});
-
+  // Current mouse position
+  let mouseX = 0;
+  let mouseY = 0;
+  
+  // Current light position
+  let lightX = 0;
+  let lightY = 0;
+  
+  // Smoothness factor (smaller values mean slower movement)
+  const smoothness = 0.08;
+  
+  // Update mouse position on movement
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  });
+  
+  // Smoothly animate the light to follow the mouse
+  function animateLight() {
+    // Gradually move the light position towards the mouse position
+    lightX += (mouseX - lightX) * smoothness;
+    lightY += (mouseY - lightY) * smoothness;
+  
+    // Update the light's position
+    light.style.left = `${lightX}px`;
+    light.style.top = `${lightY}px`;
+  
+    // Continue the animation loop
+    requestAnimationFrame(animateLight);
+  }
 
 // Función para cargar el header
 function loadHeader() {
@@ -151,5 +174,6 @@ function hideTooltip() {
 document.addEventListener('DOMContentLoaded', function() {
   loadHeader();
   loadFooter();
+  animateLight();
   setupContactButton(); 
 });

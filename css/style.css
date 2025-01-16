@@ -177,6 +177,7 @@ footer button:hover{
   background: radial-gradient(circle, rgba(104, 59, 22, 0.3), rgba(41, 29, 19, 0.1) 60%, rgba(255, 255, 255, 0) 90%);
   transform: translate(-50%, -50%);
   mix-blend-mode: screen; /* Permite un efecto de fusión con el fondo */
+  transition: transform 0.3s ease-out; /* Smooth movement */
 }
 
 /* CARDS ------------- */
