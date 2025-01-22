@@ -72,8 +72,8 @@ p{
 /* Styling for the content container with Grid */
 .project__content {
     display: grid;
-    grid-template-columns: 2fr 3fr; /* Two equal columns */
-    gap: 2rem; /* Space between columns */
+    grid-template-columns: 2fr 4fr;
+    gap: 2rem; 
     margin: 0 auto;
     text-align: left;
 }
@@ -85,10 +85,15 @@ p{
     border-radius: 8px;
 }
 
-.technical-rider a:hover > p {
-    color: #6e6e6e; /* Change text color on hover */
+
+.technical-rider a > p{
+    text-decoration: underline;
 }
 
+.technical-rider a:hover > p {
+    color: var(--primary);
+    text-decoration: underline;
+}
 
 
 
@@ -292,6 +297,20 @@ p{
 }
 .margin-top{
     margin-top: 1rem;
+}
+
+.margin-top-technical{
+    margin-top: 1rem;
+}
+.project-image{
+    width: 100%;
+}
+.black{
+    color: var(--black);
+}
+
+.project-image img{
+    border-radius: 10px;
 }
 
 
