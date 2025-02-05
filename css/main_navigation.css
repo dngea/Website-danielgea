@@ -30,6 +30,8 @@ a{
     padding: 0 5rem;
     border-bottom: var(--background) 0.1rem solid;
     z-index: 5;
+    display: block;
+    flex-wrap: nowrap;
 }
 .nav--width{
     max-width: var(--max-width);
