@@ -252,9 +252,6 @@ p{
     text-align: left;
     padding: 2rem;
 }
-.case-study__body--summary, .case-study__body--content{
-    /* background-color: aqua; */
-}
 .case-study__body--content h2{
     margin-top: 1rem;
 }
@@ -297,6 +294,9 @@ p{
 }
 .margin-top{
     margin-top: 1rem;
+}
+.margin-bottom{
+    margin-bottom: 10rem;
 }
 
 .margin-top-technical{
@@ -347,6 +347,38 @@ img {
     outline: none; /* Remove outline */
     background-color: #e5e5e5
   }
+
+  /* Carousel */
+  .carousel-control-next, .carousel-control-next:focus {
+    background-color: var(--black);
+    opacity: 0;
+    width:35%;
+    top: 0%;
+    bottom: 0%;
+  }
+  .carousel-control-next:hover{
+    background-color: var(--black);
+    opacity: 0.15;
+  }
+  .carousel-control-prev, .carousel-control-prev:focus {
+    background-color: var(--black);
+    opacity: 0;
+    width:35%; 
+    top: 0%;
+    bottom: 0%;
+  }
+  .carousel-control-prev:hover{
+    background-color: var(--black);
+    opacity: 0.15;
+  }
+  .carousel-indicators .active{
+    background-color: var(--primary);
+  }
+  .carousel-indicators [data-bs-target]{
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+  }
+
 
 
 
