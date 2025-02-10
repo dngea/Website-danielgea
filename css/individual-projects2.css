@@ -82,6 +82,15 @@ p{
     text-align: left;
 }
 
+.project__content h2:first-child{
+    margin-top: 0;
+    padding-top: 0;
+}
+.project__content h4:first-child{
+    margin-top: 1rem;
+}
+
+
 /* Columns for technical and summary */
 .technical-rider, 
 .summary {
