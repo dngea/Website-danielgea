@@ -16,6 +16,9 @@ h4{
 }
 p{
     padding-top: 0;   
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.01rem;
 }
 
 .primary{
@@ -30,7 +33,7 @@ p{
     width: 100%;
     padding: 0;
     max-width: 1400px;
-    margin: 0 auto;
+    margin: 2rem auto;
 }
 
 .container-1000{
@@ -51,6 +54,7 @@ p{
 /* Center the header title */
 .project__header {
     padding: 1rem;
+    margin-bottom: 2rem;
     display: flex;
     flex-wrap: wrap;
 }
@@ -84,7 +88,6 @@ p{
     padding: 1rem;
     border-radius: 8px;
 }
-
 
 .technical-rider a > p{
     text-decoration: underline;
@@ -286,6 +289,9 @@ p{
     align-items: start;
     flex-wrap: wrap;
     gap: 2rem;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
 
 }
 .text-flex{
@@ -391,11 +397,14 @@ img {
     }
 }
 
-@media (max-width: 672px){
-    
+@media (max-width: 875px) {
+    p{
+        font-size: 15px; /* Slightly smaller for mobile */
+        line-height: 1.5;
+    }
     .contenedor{
-        margin-top: 8rem;
-        width: 95%;
+        margin-top: 4rem;
+        width: 100%;
     }
     .container-1000{
         width: 95%;
@@ -416,6 +425,11 @@ img {
     .technical-rider{
         order: 2; /* Move the technical section below */
         width: 100%; /* Make it take 100% width */
+        display: flex;
+        justify-content: left;
+        align-items:start;
+        gap: 6rem;
+
     }
 
     .summary {
@@ -461,6 +475,19 @@ img {
     }
 }
 
+@media (max-width: 672px){
+    .contenedor{
+        margin-top: 9rem;
+    }
+    .flex{
+        flex-direction: column;
+    }
+    .text-flex{
+        width: 100%;
+        flex-basis: calc(50% - 2rem);
+    }
+}
+
 @media (max-width: 500px) {
    .parallex{
     min-height: 36vh;
@@ -468,6 +495,9 @@ img {
 }
 
 @media (max-width: 460px) {
+    .contenedor{
+        margin-top: 10rem;
+    }
    .divider{
         display: none;
    }
