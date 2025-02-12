@@ -252,7 +252,7 @@ a{
         visibility: visible;
         display: flex;
         position: fixed;
-        top: 32px;
+        top: 36px;
         left: 3rem;
         z-index: 4;
         font-size: 1.5rem;
