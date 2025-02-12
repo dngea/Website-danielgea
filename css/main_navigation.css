@@ -22,7 +22,7 @@ a{
 }
 
 .nav{
-    height: 10vh;
+    height: 11vh;
     width: 100%;
     background-color: var(--dark);
     color: var(--background);
@@ -201,6 +201,7 @@ a{
 @media (max-width: 672px) {
 
     .nav{
+        height: 90px;
         padding: 0 2.5rem;
         background-color: var(--dark);
         position: fixed; /* Fija el header para que se quede en la parte superior */
@@ -251,7 +252,7 @@ a{
         visibility: visible;
         display: flex;
         position: fixed;
-        top: 3rem;
+        top: 32px;
         left: 3rem;
         z-index: 4;
         font-size: 1.5rem;
