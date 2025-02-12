@@ -28,8 +28,8 @@ Vue.component('animated-image', {
             return this.mouseY / this.height;
         },
         imgStyle() {
-            const rX = this.mousePX * 20; // Ajusta la sensibilidad de rotación
-            const rY = this.mousePY * -20; // Ajusta la sensibilidad de rotación
+            const rX = this.mousePX * 0; // Ajusta la sensibilidad de rotación
+            const rY = this.mousePY * 0; // Ajusta la sensibilidad de rotación
             return {
                 transform: `rotateY(${rX}deg) rotateX(${rY}deg)`,
             };
