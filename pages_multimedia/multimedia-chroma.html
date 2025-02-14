@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="../css/main.css?v=1.0.5">
         <link rel="stylesheet" href="../css/main_navigation.css?v=1.0.3">
         <link rel="stylesheet" href="../css/individual-projects2.css?v=1.1">
+        <link rel="stylesheet" href="../css/immersive.css">
 
         <!-- IBM PLEX SANS and Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,10 +91,23 @@
         </div>  
     </div>
 
+    <div class="immersive">
+        <div class="immersive-overlay">
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="0"/>
+            <button id="audioControl" class="audioControl">
+                <img id="mute" src="/img/multimedia/muted.png" alt="">
+            </button>
+        </div>
 
+        <div class="videoBG">
+            <video id="video" autoplay muted loop>
+                <source src="/img/multimedia/chroma/chroma.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div> 
+
+    </div>
     
-
-
     <div class="container-1000">
         <!-- Case Study 1 -->
         <div class="case-study">
@@ -280,12 +294,13 @@
 
 
     </div>
-
-    <div class="footer">MY FOOTER</div>
         
 
     <!-- JS ------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="../js/immersive.js"></script>
 </body>
 </html>
