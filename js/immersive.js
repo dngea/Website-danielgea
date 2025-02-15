@@ -58,5 +58,5 @@ gsap.fromTo("body", { backgroundColor: "#242424" }, {
         start: "bottom center", // Comienza en el centro de .immersive
         end: "bottom top",
     },
-    backgroundColor: "#FFF6EE"  // Vuelve a #FFF6EE
+    backgroundColor: "#FFF6EE"  // Vuelve 
 });

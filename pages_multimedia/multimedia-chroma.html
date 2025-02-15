@@ -31,26 +31,23 @@
 
 <body>
 
-    <!-- ADD HEADER -->
-    <div id="header"></div>
+    <nav id="header"></nav>
 
-    <!-- BIG CONTAINER 1400px ------- -->
-    <div class="contenedor">
-
+    <main class="contenedor">
         <!-- Project Introduction -->
-        <div class="container-1000">
+        <section class="container-1000">
             <div class="project">
                 <div class="project__content">
                     <div class="empty"></div>
-                    <div class="project__header">
+                    <header class="project__header">
                         <h1>Chroma</h1>
-                        <p class="date">June of 2023</p>
+                        <p class="date">Jan of 2024</p>
                         <p class="location">Porto, Portugal</p>
-                    </div>
+                    </header>
                 </div>
-    
+
                 <div class="project__content">
-                    <div class="technical-rider">
+                    <aside class="technical-rider">
                         <div>
                             <h4 class="primary">Tasks</h4>
                             <p>Narrative</p>
@@ -61,10 +58,8 @@
                             <p>FMOD</p>
                             <p>Pure Data</p>
                             <p>Reaper</p>
-
                         </div>
                         <div>
-
                             <h4 class="primary">Timeline</h4>
                             <p>8 weeks</p>
         
@@ -72,52 +67,47 @@
                             <a href="#" target="_blank"><p>Documentation</p></a>
                             <a href="#" target="_blank"><p>Figma prototype</p></a> -->
                         </div>
-                    </div>
+                    </aside>
     
-                    <div class="summary">
+                    <section class="summary">
                         <h2>Overview</h2>
                         <p>
                             As part of a team of six, I contributed to the development of Chroma, an immersive Unity-based game where players guide Lumina, the spirit of light, to restore balance to a shadowy world by solving puzzles and collecting rainbow-colored crystals. Over an 8-week timeline, I was responsible for sound design, using tools like FMOD, Pure Data, and Reaper to create real-time interactive audio components that enhanced the game’s atmosphere and player experience. I also collaborated on implementing game logic, ensuring seamless integration of sound with gameplay mechanics.
                         </p>
-    
                         <h2>Genre</h2>
                         <p>
                             The primary genre of the game is a mystery puzzle adventure. The game notably falls under the indie category due to its emphasis on visual cues, sound design and the significance of cozy ambience.
                         </p>
-
-                    </div>
+                    </section>
                 </div>
             </div>
-        </div>  
-    </div>
-
-    <div class="immersive">
-        <div class="immersive-overlay">
-            <input type="range" id="volume" min="0" max="1" step="0.01" value="0"/>
-            <button id="audioControl" class="audioControl">
-                <img id="mute" src="/img/multimedia/muted.png" alt="">
-            </button>
-        </div>
-
-        <div class="videoBG">
-            <video id="video" autoplay muted loop>
-                <source src="/img/multimedia/chroma/chroma.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div> 
-
-    </div>
+        </section>  
     
-    <div class="container-1000">
-        <!-- Case Study 1 -->
-        <div class="case-study">
-            <div class="case-study__header">
-                <div class="divider"></div>
-                <h2>Concept</h2>
-                <div class="divider"></div>
+        <section class="immersive">
+            <div class="immersive-overlay">
+                <input type="range" id="volume" min="0" max="1" step="0.01" value="0"/>
+                <button id="audioControl" class="audioControl">
+                    <img id="mute" src="/img/multimedia/muted.png" alt="">
+                </button>
             </div>
-            <div class="case-study__body">
-                
+
+            <div class="videoBG">
+                <video id="video" autoplay muted loop>
+                    <source src="/img/multimedia/chroma/chroma.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div> 
+        </section>
+        
+        <article class="container-1000">
+            <section class="case-study">
+                <header class="case-study__header">
+                    <div class="divider"></div>
+                    <h2>Concept</h2>
+                    <div class="divider"></div>
+                </header>
+                <div class="case-study__body">
+                    
                     <h3>Style</h3>
                     <p>
                         In a shadowy world, Lumina, the spirit of light, emerges 
@@ -130,177 +120,127 @@
                         of reconstruction.
                     </p>
                     <p>
-                        The visual style of "Chroma" is minimalist and monochrome, evolving into colourful and detailed environments as the game progresses. The 3D game is characterised by low-poly graphics with soft edges, creating a cozy and inviting atmosphere. The game flow is intuitive and smooth, focusing on exploration and puzzle-solving.
-                        Initial visual style is grayscale or desaturated blues, creating a mysterious and subdued twilight atmosphere. Shades of grey, earthy brown and muted greens, emphasising the absence of vibrant colours.
+                        The visual style of "Chroma" is minimalist and monochrome, evolving into colourful and detailed environments as the game progresses. The 3D game is characterized by low-poly graphics with soft edges, creating a cozy and inviting atmosphere. The game flow is intuitive and smooth, focusing on exploration and puzzle-solving.
+                        Initial visual style is grayscale or desaturated blues, creating a mysterious and subdued twilight atmosphere. Shades of grey, earthy brown and muted greens, emphasizing the absence of vibrant colours.
                     </p>
 
                     <h3>Player Motivation</h3>
+                    <p>
+                        The victory condition lies in collecting all pieces of seven 
+                        colours of the rainbow and bringing them to the crystal heart 
+                        of the world while witnessing the gradual restoration of colour to the environment.
+                        <br>
+                        <br> The game's calming and non-competitive nature, combined with immersive visuals, not overly complicated obstacles, and soothing sounds, motivate players to enjoy the full experience. Another driving force behind the game is the relatively short digital experience - the player can easily sense the approaching end of it and therefore get determined to reach it.
+                    </p>
+                </div>
+            </section>
+
+            <section class="case-study">
+                <div class="case-study__header">
+                    <div class="divider"></div>
+                    <h2>Features</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="case-study__body">
+                    
+                        <h3>Main Mechanics</h3>
+                        <ul>
+                            <li>EXPLORE with arrow keys and move the character across the landscape in search of colour crystals.</li>
+                            <li>SOLVE some simple puzzles to gain access to colour crystals.</li>
+                            <li>COLLECT colour crystals guarded by shadow monster that once finally free will tell stories about their past lives.</li>
+                            <li>RETURN the colour crystals to the Crystal Heart at the centre of the world, bringing back vibrancy to the world and coming closer to fully restoring nature's balance.</li>
+                        </ul>
+                        <h3>Theme</h3>
                         <p>
-                            The victory condition lies in collecting all pieces of seven 
-                            colours of the rainbow and bringing them to the crystal heart 
-                            of the world while witnessing the gradual restoration of colour to the environment.
-                            <br>
-                            <br> The game's calming and non-competitive nature, combined with immersive visuals, not overly complicated obstacles, and soothing sounds, motivate players to enjoy the full experience. Another driving force behind the game is the relatively short digital experience - the player can easily sense the approaching end of it and therefore get determined to reach it.
+                            The theme of "Chroma" revolves around the return of a desaturated world to its vibrant, colourful state. It highlights the theme of restoration and harmony with nature.
                         </p>
-                
-            </div>
-        </div>
+                    
+                </div>
+            </section>
 
-        <!-- Case Study 2 -->
-        <div class="case-study">
-            <div class="case-study__header">
-                <div class="divider"></div>
-                <h2>Features</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="case-study__body">
-                
-                    <h3>Main Mechanics</h3>
-                    <ul>
-                        <li>EXPLORE with arrow keys and move the character across the landscape in search of colour crystals.</li>
-                        <li>SOLVE some simple puzzles to gain access to colour crystals.</li>
-                        <li>COLLECT colour crystals guarded by shadow monster that once finally free will tell stories about their past lives.</li>
-                        <li>RETURN the colour crystals to the Crystal Heart at the centre of the world, bringing back vibrancy to the world and coming closer to fully restoring nature's balance.</li>
-                    </ul>
-                    <h3>Theme</h3>
-                    <p>
-                        The theme of "Chroma" revolves around the return of a desaturated world to its vibrant, colourful state. It highlights the theme of restoration and harmony with nature.
-                    </p>
-                
-            </div>
-        </div>
+            <section class="case-study">
+                <div class="case-study__header">
+                    <div class="divider"></div>
+                    <h2>Mechanics</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="case-study__body">
+                    
+                        <h3>Progression</h3>
+                        <p>
+                            In "Chroma," the primary goal is to collect all seven colours of the rainbow and restore balance to the magical world. Unlike traditional games, this one does not have a conventional losing mechanism; players cannot lose in the typical sense, but they can choose to give up. The game offers replay value by allowing players to collect and return the crystals in any order they wish, making each playthrough unique.
+                            <br><br>
+                            Players engage in a variety of activities, including wandering through the environment, collecting colour crystals, restoring colours, interacting with poetic guardians, and avoiding shadow creatures. The progression system is dynamic, with the order in which the colours return to the world changing based on the crystals collected. Currently, the game is designed to save progress after each crystal is collected, however, this saving system is still in the planning stages and has not been implemented yet.
+                        </p>
+                    
+                </div>
+            </section>
 
-        <!-- Case Study 3 -->
-        <div class="case-study">
-            <div class="case-study__header">
-                <div class="divider"></div>
-                <h2>Mechanics</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="case-study__body">
-                
-                    <h3>Progression</h3>
-                    <p>
-                        In "Chroma," the primary goal is to collect all seven colours of the rainbow and restore balance to the magical world. Unlike traditional games, this one does not have a conventional losing mechanism; players cannot lose in the typical sense, but they can choose to give up. The game offers replay value by allowing players to collect and return the crystals in any order they wish, making each playthrough unique.
-                        <br><br>
-                        Players engage in a variety of activities, including wandering through the environment, collecting colour crystals, restoring colours, interacting with poetic guardians, and avoiding shadow creatures. The progression system is dynamic, with the order in which the colours return to the world changing based on the crystals collected. Currently, the game is designed to save progress after each crystal is collected, however, this saving system is still in the planning stages and has not been implemented yet.
-                    </p>
-                
-            </div>
-        </div>
+            <section class="case-study">
+                <div class="case-study__header">
+                    <div class="divider"></div>
+                    <h2>Targeting</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="case-study__body">
 
-        <!-- Case Study 4 -->
-        <div class="case-study">
-            <div class="case-study__header">
-                <div class="divider"></div>
-                <h2>Targeting</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="case-study__body">
+                        <h3>Target Market</h3>
+                        <p>
+                            This game is for people who appreciate an artistic and tranquil digital experience. It is aimed at players looking for relaxation rather than intense challenges, and those who enjoy visually appealing games that focus on aesthetic and auditory pleasures.
+                        </p>
+                        <h3>Target Rating</h3>
+                        <p>
+                            The rating of the game is E (Everyone). It can be ensured that players of all ages enjoy the experience without encountering any unsuitable content.
+                        </p>
+                        <h3>Target Platform and HW Requirements</h3>
+                        <p>
+                            The primary genre of the game is a mystery puzzle adventure. The game notably falls under the indie category due to its emphasis on visual cues, sound design and the significance of cozy ambience.
+                        </p>
+                        <h3>Competitive Analysis</h3>
+                        <p>
+                            Wayfinder is a web based generative art game by Matt DesLauriers, that offers a contemplating journey through a gorgeous landscape with the goal of restoring nature’s memories by collecting and creating poems. Both games provide players with a serene experience, creating an outlet of relaxation and appreciation of beauty. They both have nature and balance restoration themes through different collectibles and neither game is designed to be competitive or particularly challenging. However, the games have different aesthetic approaches and artistic styles, Wayfinder being a combination of illustration, 2D animation and 3D modelling.
+                        </p>
+                    
+                </div>
+            </section>
+            
+            <section class="case-study">
+                <div class="case-study__header">
+                    <div class="divider"></div>
+                    <h2>Sound Design</h2>
+                    <div class="divider"></div>
+                </div>
+                <div class="case-study__body">
 
-                    <h3>Target Market</h3>
-                    <p>
-                        This game is for people who appreciate an artistic and tranquil digital experience. It is aimed at players looking for relaxation rather than intense challenges, and those who enjoy visually appealing games that focus on aesthetic and auditory pleasures.
-                    </p>
-                    <h3>Target Rating</h3>
-                    <p>
-                        The rating of the game is E (Everyone). It can be ensured that players of all ages enjoy the experience without encountering any unsuitable content.
-                    </p>
-                    <h3>Target Platform and HW Requirements</h3>
-                    <p>
-                        The primary genre of the game is a mystery puzzle adventure. The game notably falls under the indie category due to its emphasis on visual cues, sound design and the significance of cozy ambience.
-                    </p>
-                    <h3>Competitive Analysis</h3>
-                    <p>
-                        Wayfinder is a web based generative art game by Matt DesLauriers, that offers a contemplating journey through a gorgeous landscape with the goal of restoring nature’s memories by collecting and creating poems. Both games provide players with a serene experience, creating an outlet of relaxation and appreciation of beauty. They both have nature and balance restoration themes through different collectibles and neither game is designed to be competitive or particularly challenging. However, the games have different aesthetic approaches and artistic styles, Wayfinder being a combination of illustration, 2D animation and 3D modelling.
-                    </p>
-                
-            </div>
-        </div>
+                        <h3>Sound Effects</h3>
+                        <p>
+                            The sound effects intended for Chroma look for an overall rounded feeling. The mainly sound effects employed, are associated with mystical environments, like triangles, chimes, equalised white noise and orchestra instruments.
+                        </p>
+                        <p>
+                            Some games taken as reference are “Tunic” and “Tiny Room Stories”. The first game is an isometric game where the sounds become the most relevant storyteller elements. The second game uses more than 10 types of sounds for every object and the possible surface it can be contacted with, making a unique combination of sounds with a feeling of having endless possibilities. All the sounds are treated very lightly, with no prior attempt of making them more important than others.
+                        </p>
+                        <h3>Music</h3>
+                        <p>
+                            For the music, different levels have different melodies. As well as the idea of the game was to play with colours and what they represent to our culture and emotions. For the development of the different levels, the idea is to explore the combination of different scales in music to help the perception of the player understand better the world game.. These scales are known as “modes” (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian and Locrian). In music, they have psychological and emotional connotations. As a positive aspect for the game, they also represent seven scales, for seven colours in the game, Chroma.
+                        </p>
+                        <p>
+                            The game has a main melody for each level, but also different landscapes or “ambience” based on which part of the map the player is located or depending also on the event triggered. But always, in each level, the music will come back when no event is apparently triggered.
+                        </p>
+                        <p>
+                            Finally, when the menu is open or close, there is a sound effect going along with the menu. The music does not stop, but it just gets decreased. Also, for buttons and controls in the menu, there are sound effects.
+                        </p>                
+                </div>
+            </section>
+        </article>
 
-        <!-- Case Study 5 -->
-        <div class="case-study">
-            <div class="case-study__header">
-                <div class="divider"></div>
-                <h2>Sound Design</h2>
-                <div class="divider"></div>
-            </div>
-            <div class="case-study__body">
-
-                    <h3>Sound Effects</h3>
-                    <p>
-                        The sound effects intended for Chroma look for an overall rounded feeling. The mainly sound effects employed, are associated with mystical environments, like triangles, chimes, equalised white noise and orchestra instruments.
-                    </p>
-                    <p>
-                        Some games taken as reference are “Tunic” and “Tiny Room Stories”. The first game is an isometric game where the sounds become the most relevant storyteller elements. The second game uses more than 10 types of sounds for every object and the possible surface it can be contacted with, making a unique combination of sounds with a feeling of having endless possibilities. All the sounds are treated very lightly, with no prior attempt of making them more important than others.
-                    </p>
-                    <h3>Music</h3>
-                    <p>
-                        For the music, different levels have different melodies. As well as the idea of the game was to play with colours and what they represent to our culture and emotions. For the development of the different levels, the idea is to explore the combination of different scales in music to help the perception of the player understand better the world game.. These scales are known as “modes” (Ionian, Dorian, Phrygian, Lydian, Mixolydian, Aeolian and Locrian). In music, they have psychological and emotional connotations. As a positive aspect for the game, they also represent seven scales, for seven colours in the game, Chroma.
-                    </p>
-                    <p>
-                        The game has a main melody for each level, but also different landscapes or “ambience” based on which part of the map the player is located or depending also on the event triggered. But always, in each level, the music will come back when no event is apparently triggered.
-                    </p>
-                    <p>
-                        Finally, when the menu is open or close, there is a sound effect going along with the menu. The music does not stop, but it just gets decreased. Also, for buttons and controls in the menu, there are sound effects.
-                    </p>
-
-                    <div class="case-study__images margin-top">
-                        <img src="/img/multimedia/chroma/chromaPD.png" alt="Netreceive OSC Pure data" />
-                    </div>
-
-                    <audio controls class="custom-audio">
-                        <source src="/img/multimedia/chroma/ChromaPD_soundscape.mp4" type="audio/ogg">
-                    </audio>
-                
-            </div>
-        </div>
-    </div>
-
-
-
-
-         
-         
-
-
-        <!-- <div class="projectGallery">
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal1.jpg" alt=""></div>
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal2.jpg" alt=""></div>
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal3.jpg" alt=""></div>
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal4.jpg" alt=""></div>
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal5.jpg" alt=""></div>
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal6.jpg" alt=""></div>
-            <div class="fotoprueba"><img src="../img/multimedia/brutal_delusions/brutal7.jpg" alt=""></div>
-        </div>
-
-        <div class="projectContent2">
-            <div class="projectContent__description">
-                <div class="h2">Technical rider</div>
-                <div class="line">Software: Touchdesigner, Mixxx</div>
-                <div class="line">Reources: Commercial music & free images</div>
-                <div class="line">Idea: Brutalistic visuals and music reaction</div>
-                <div class="line">Location: University of Porto</div>
-            </div>
+    </main>
         
-            <div class="projectContent__description">
-                <div class="h2">Links</div>
-                <a href="https://youtu.be/p7gku4VuyQs" target="_blank"><div class="line--link">Pitch presentation</div></a>
-                <a href="https://youtu.be/p7gku4VuyQs" target="_blank"><div class="line--link">Video demo</div></a>
-            </div>
-        </div> -->
-
-
-
-
-    </div>
-        
-
-    <!-- JS ------------- -->
+    <!-- js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="../js/immersive.js"></script>
+    
 </body>
 </html>

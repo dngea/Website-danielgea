@@ -48,14 +48,14 @@ button:hover{
 
 .videoBG{
     width: 75%;
-    border: #000000 solid 7px;
+    border: var(--black) solid 7px;
     border-radius: 0px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    box-shadow: #000000 20px 20px 0px 0px;
+    box-shadow: var(--black) 20px 20px 0px 0px;
 }
 
 
@@ -311,7 +311,7 @@ input[type="range"]:disabled::-moz-range-thumb {
         width: 100%;
         gap: 4rem;
         align-items: center;
-        
+		height: 75vh;
     }
     .videoBG{
         order: 1;
