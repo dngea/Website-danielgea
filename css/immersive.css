@@ -29,6 +29,7 @@ body{
     padding: 2rem 4rem;
     box-sizing: border-box;
     transform: translateY(0%);
+	z-index: 1;
 }
 .immersive-overlay:hover {
     background-color: #000000b5;
