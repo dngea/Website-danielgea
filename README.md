@@ -1,4 +1,4 @@
-# RoBOT.gitbub.io
+# Daniel Gea | Frontend developer | UX/UI designer | Creative developer
 
 DNGEA PORTFOLIO.
 
