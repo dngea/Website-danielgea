@@ -20,17 +20,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet"> 
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,400;1,500&family=Montserrat:wght@900&family=Raleway:wght@400;800&display=swap" rel="stylesheet"> 
-    
     <!-- MY STYLES -->
-    <link rel="stylesheet" href="css/main.css?v=1.0.5">
+    <!-- <link rel="stylesheet" href="css/main.css?v=1.0.5"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main_navigation.css?v=1.0.3">
+    <link rel="stylesheet" href="css/projects.css">
     
     <!-- IBM PLEX SANS and Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,178 +36,118 @@
 
 <body>
     
-    <!-- ADD HEADER -->
     <div id="header"></div>
 
+    <div class="wrapper">
+        <main class="container-1200 z1">
+            <section class="page-description">
+                <h1>Frontend</h1>
+                <p>
+                    I came across my passion for web development, almost by accident.  Since childhood, 
+                    I've always been drawn to  photography, and after showcasing my work through public 
+                    exhibitions, I felt inspired to explore digital platforms, and I got captivated by 
+                    the endless possibilities the web offered.
+                </p>
+            </section>
 
-    <div class="contenedor">
-
-        <!-- PAGE DESCRIPTION ---------------- -->
-    
-        <div class="page__description">
-    
-            <h1>Frontend</h1>
-            <p>
-                I came across my passion for web development, almost by accident. 
-                Since childhood, I've always been drawn to 
-                photography, and after showcasing my work through 
-                public exhibitions, 
-                I felt inspired to explore digital platforms to display my art.
-                <br>
-                <br>
-                At the time, I had no real knowledge of how websites 
-                were built—just a basic understanding of HTML from high 
-                school. But once I found a purpose, 
-                I was captivated by the endless possibilities the web offered.
-            </p>
-        </div>
-    
-    
-    
-    
-    <!-- PAGE SHOW PROJECTS --------------- -->
-        <div class="page__showProjects">
-    
-            <div class="grid_responsive">
-
-                <a href="/pages_frontend/frontend-portfolio.html">
-                    <div class="card">
-                        <img src="img/frontend/mockup_website.jpg" alt="Music Festival Website with Sass">
-                        <div class="card__container">
-                            <p>[2025]</p>
-                            <h3>Personal Website</h3>
-                            <p class="italic">Design and Development of Personal Portfolio Website</p>
-                            <h4>_</h4>
-                            <p>Figma, HTML, CSS, JavaScript</p>
+            <section class="page-projects">
+                <a href="/pages_frontend/frontend-music_band.html">
+                    <article class="project-card">
+                        <div class="card-information">
+                            <aside class="card-aside">
+                                <h4>Website | Music Band</h4>
+                                <p>2022</p>
+                            </aside>
+                            <header class="card-main">
+                                <h2 class="card-title">Silversun Pickups</h2>
+                                <ul class="card-tags">
+                                    <li class="tag">HTML</li>
+                                    <li class="tag">CSS</li>
+                                    <li class="tag">JavaScript</li>
+                                </ul>
+                            </header>
                         </div>
-                    </div>
+                        <div class="card-prev">
+                            <img src="img/prev/silversun-prev.jpg" alt="">
+                        </div>
+                    </article>
                 </a>
 
                 <a href="/pages_frontend/frontend-restaurant-orders.html">
-                    <div class="card">
-                        <img src="img/frontend/pizza.jpg" alt="Music Festival Website with Sass">
-                        <div class="card__container">
-                            <p>[2025]</p>
-                            <h3>Restaurant Order Registration System</h3>
-                            <p class="italic">Built small order registration system with automated total calculation</p>
-                            <h4>_</h4>
-                            <p>React, TypeScript, Tailwind CSS</p>
-                        </div>
+                <article class="project-card">
+                    <div class="card-information">
+                        <aside class="card-aside">
+                            <h4>Order Calculator</h4>
+                            <p>2024</p>
+                        </aside>
+                        <header class="card-main">
+                            <h2 class="card-title">Order Registration System</h2>
+                            <ul class="card-tags">
+                                <li class="tag">React</li>
+                                <li class="tag">TypeScript</li>
+                                <li class="tag">Tailwind CSS</li>
+                            </ul>
+                        </header>
                     </div>
-                </a>
-                     
-                <a href="/pages_frontend/frontend-music-festival.html">
-                    <div class="card">
-                        <img src="img/frontend/granadasound.jpg" alt="Music Festival Website with Sass">
-                        <div class="card__container">
-                            <p>[2024]</p>
-                            <h3>Music Festival</h3>
-                            <p class="italic">Development of a Music Festival Website</p>
-                            <h4>_</h4>
-                            <p>HTML, Sass, JavaScript</p>
-                        </div>
+                    <div class="card-prev">
+                        <img src="img/prev/calculator-prev.jpg" alt="">
                     </div>
+                </article>
                 </a>
 
-                <a href="/pages_frontend/frontend-music_band.html">
-                    <div class="card">
-                        <img src="/img/frontend/portada-silversun.jpg" alt="Music band website">
-                        <div class="card__container">
-                            <p>[2021]</p>
-                            <h3>Silversun Pickups</h3>
-                            <p class="italic">Redesign and Development of a Music Band's Website</p>
-                            <h4>_</h4>
-                            <p>HTML, CSS, JavaScript, Bootstrap</p>
-                        </div>
+                <a href="/pages_frontend/frontend-music-festival.html">
+                <article class="project-card">
+                    <div class="card-information">
+                        <aside class="card-aside">
+                            <h4>Website | Music Festival</h4>
+                            <p>2022</p>
+                        </aside>
+                        <header class="card-main">
+                            <h2 class="card-title">Granada Sound</h2>
+                            <ul class="card-tags">
+                                <li class="tag">HTML</li>
+                                <li class="tag">Sass</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">Gulp</li>
+                            </ul>
+                        </header>
                     </div>
+                    <div class="card-prev">
+                        <img src="img/prev/music-festival-prev.jpg" alt="">
+                    </div>
+                </article>
                 </a>
-                
+
                 <a href="/pages_frontend/frontend-cafe.html">
-                    <div class="card">
-                        <img src="img/frontend/laGoma.jpg" alt="Blog for Coffee page">
-                        <div class="card__container">
-                            <p>[2021]</p>
-                            <h3>Coffee blog</h3>
-                            <p class="italic">Coffee-theme Website for Local Café</p>
-                            <h4>_</h4>
-                            <p>HTML, CSS</p>
-                        </div>
+                <article class="project-card">
+                    <div class="card-information">
+                        <aside class="card-aside">
+                            <h4>Website | Blog</h4>
+                            <p>2022</p>
+                        </aside>
+                        <header class="card-main">
+                            <h2 class="card-title">Local Café</h2>
+                            <ul class="card-tags">
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">JavaScript</li>
+                            </ul>
+                        </header>
                     </div>
-                </a>
-        
-                <a href="/pages_frontend/frontend-coimbracor.html" target="_blank">
-                    <div class="card">
-                        <img src="img/fotografia/coimbra/gato-icon.jpg" alt="A cor de coimbra">
-                        <div class="card__container">
-                            <p>[2021]</p>
-                            <h3>A cor de coimbra</h3>
-                            <p class="italic">An Artistic Photography Project</p>
-                            <h4>_</h4>
-                            <p>HTML, CSS</p>
-                        </div>
+                    <div class="card-prev">
+                        <img src="img/prev/blog-cafe-prev.jpg" alt="">
                     </div>
+                </article>
                 </a>
-                
-                <a href="/pages_frontend/frontend-quien-habla.html" target="_blank">
-                    <div class="card">
-                        <img src="img/fotografia/quienhabla/quienhablaicon.jpg" alt="Quien habla de ti">
-                        <div class="card__container">
-                            <p>[2020]</p>
-                            <h3>Quien habla de ti</h3>
-                            <p class="italic">An Artistic Photography Project</p>
-                            <h4>_</h4>
-                            <p>HTML, CSS</p>
-                        </div>
-                    </div>
-                </a>
-                
-               
-                  
-                       
-            </div>
-    
-        </div>
-       
-        
-        
-        
-        
-    
-        
+            </section>
+        </main>
     </div>
 
-    <!-- ADD Footer -->
-    <footer>
-        <div class="socialmedia">
-            <a href="https://www.instagram.com/dnpgzl_/?hl=es" target="_blank">
-        <img src="img/instagram.png" width="38px" height="38px">
-            </a>
-        </div>
-        
-        <div class="socialmedia">
-            <a href="https://www.linkedin.com/in/daniel-gea-palenzuela-389a02177/" target="_blank">
-        <img src="img/linkedin.png" width="38px" height="38px">
-            </a>
-        </div>
-        
-        <div class="socialmedia">
-            <a href="https://github.com/dngea" target="_blank">
-        <img src="img/github.png" width="38px" height="38px">
-            </a>
-        </div>
-    
-        <div class="socialmedia">
-          <a href="https://vsco.co/dngea/gallery" target="_blank">
-      <img src="img/vsco.png" width="38px" height="38px">
-          </a>
-      </div>
-    
-      <button id="contactButton">Contact Me</button>
-        
-    </footer>
+    <footer id="footer" class="footer"></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
+    
 </body>
     
 </html>

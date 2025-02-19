@@ -11,148 +11,120 @@
 
       gtag('config', 'G-QT916BT4LX');
     </script>
-        <meta charset="UTF-8">
-        <title>About me</title>
+
+    <meta charset="UTF-8">
+    <title>About me</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/home/round.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/home/round.ico" type="image/x-icon">
     
-        <!-- Favicon -->
-        <link rel="icon" href="img/home/round.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="img/home/round.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="css/main.css?v=1.0.5"> -->
+    <link rel="stylesheet" href="css/main_navigation.css?v=1.0.3">      
+    <link rel="stylesheet" href="css/projects.css">      
     
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        
-        <!-- MY STYLES -->
-        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> -->
-        <link rel="stylesheet" href="css/main.css?v=1.0.5">
-        <link rel="stylesheet" href="css/main_navigation.css?v=1.0.3">
-    
-        <!-- IBM PLEX SANS and Work Sans -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">  
+    <!-- IBM PLEX SANS and Work Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-    <!-- ADD HEADER -->
     <div id="header"></div>
+    
+    <div class="wrapper">
+        <main class="contenedor-about">
 
-
-    <!-- CONTENT -->
-
-    <div class="contenedor-about">
-
-        <div id="app">
-            <div class="about">
-                <animated-image data-image="/img/home/FOTO_perfil.jpg"></animated-image>
-        
-                <div class="about__info">
-                    <h2><span style="color: var(--primary);">Hola!</span></h2>
-                    <h1>It's Daniel.</h1>
-                    <div class="flex margin-top">
-                        <div class="inline-group">
-                            <p class="date">Location</p>
-                            <p class="location">Vienna, Austria</p>
+            <div id="app">
+                <div class="about">
+                    <animated-image data-image="/img/home/FOTO_perfil.webp"></animated-image>
+            
+                    <div class="about__info">
+                        <h2><span style="color: var(--primary);">Hola!</span></h2>
+                        <h1>It's Daniel.</h1>
+                        <div class="flex margin-top">
+                            <div class="inline-group">
+                                <p class="date">Location</p>
+                                <p class="location">Vienna, Austria</p>
+                            </div>
+                            <div class="tooltip">
+                                <!-- <i class="fa-sharp fa-regular fa-clipboard"></i> -->
+                                <span class="email" onclick="copyEmail('dngeap@gmail.com')">
+                                    dngeap@gmail.com
+                                </span>
+                                <!-- <span class="tooltiptext" id="tooltipMessage">Copy email</span> -->
+                            </div>
+                            
                         </div>
-                        <div class="tooltip">
-                            <i class="fa-sharp fa-regular fa-clipboard"></i>
-                            <span class="email" onclick="copyEmail('dngeap@gmail.com')" onmouseover="showTooltip()" onmouseout="hideTooltip()">
-                                dngeap@gmail.com
-                            </span>
-                            <span class="tooltiptext" id="tooltipMessage">copy email</span>
-                        </div>
+            
+                        <p>
+                            Originally from Granada, in southern Spain.
+                            I'm a <span class="bold">junior frontend developer</span> 
+                            with a solid foundation in UX/UI design and creative media projects.
+                            I have always been drawn to the combination of creativity and technical expertise, from concept and 
+                            design to storytelling and development. 
+                            I studied Information Science in Spain and completed a master's in Interactive Multimedia in Porto, Portugal. 
+                            <!-- I live in Vienna since 2024, looking forward to new international opportunities. -->
+                        </p>
+                        <p><span class="primary">Languages:</span> Spanish, English, German and Portuguese.</p>
                     </div>
-        
-                    <p>
-                        Originally from Granada, in southern Spain.
-                        I'm a <span class="bold">junior frontend developer</span> 
-                        with a solid foundation in UX/UI design and creative media projects.
-                        I have always been drawn to the combination of creativity and technical expertise, from concept and 
-                        design to storytelling and development. 
-                        I studied Information Science in Spain and completed a master's in Interactive Multimedia in Porto, Portugal. 
-                        <!-- I live in Vienna since 2024, looking forward to new international opportunities. -->
-                    </p>
-                    <p><span class="primary">Languages:</span> Spanish, English, German and Portuguese.</p>
+                </div>
+            </div>
+
+            
+            <div class="skills-container" id="skills">
+                <h2>Skills</h2>
+                <div class="skills">
+                <div class="skills-4">
+                    <p>HTML</p>
+                    <p>CSS</p>
+                    <p>JavaScript</p>
+                    <p>React</p>
+                </div>
+                <div class="skills-4">
+                    <p>Sass</p>
+                    <p>Bootstrap</p>
+                    <p>Tailwind CSS</p>
+                    <p>TypeScript</p>
+                </div>
+                <div class="skills-4">
+                    <p>Figma</p>
+                    <p>WordPress</p>
+                    <p>SEO</p>
+                    <p>PHP</p>
+                </div>
+                <div class="skills-4">
+                    <p>Git</p>
+                    <p>Gulp</p>
+                    <p>Python</p>
+                    <p>C#</p>
                 </div>
             </div>
         </div>
 
-        
-        <div class="skills-container">
-            <h2>Skills</h2>
-            <div class="skills">
-            <div class="skills-4">
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>JavaScript</p>
-                <p>React</p>
+            <div class="resume">
+                <button id="downloadBtn">Download Resume</button>
             </div>
-            <div class="skills-4">
-                <p>Sass</p>
-                <p>Bootstrap</p>
-                <p>Tailwind CSS</p>
-                <p>TypeScript</p>
-            </div>
-            <div class="skills-4">
-                <p>Figma</p>
-                <p>WordPress</p>
-                <p>SEO</p>
-                <p>PHP</p>
-            </div>
-            <div class="skills-4">
-                <p>Git</p>
-                <p>Gulp</p>
-                <p>Python</p>
-                <p>C#</p>
-            </div>
-        </div>
+
+            
+
+        </main>
     </div>
-
-        <div class="resume">
-            <!-- <h2>Resume</h2> -->
-            <button id="downloadBtn">Resume</button>
-        </div>
-
-        
-
-    </div>
-
-    <!-- ADD Footer -->
-    <footer>
-        <div class="socialmedia">
-            <a href="https://www.instagram.com/dnpgzl_/?hl=es" target="_blank">
-        <img src="img/instagram.png" width="38px" height="38px">
-            </a>
-        </div>
-        
-        <div class="socialmedia">
-            <a href="https://www.linkedin.com/in/daniel-gea-palenzuela-389a02177/" target="_blank">
-        <img src="img/linkedin.png" width="38px" height="38px">
-            </a>
-        </div>
-        
-        <div class="socialmedia">
-            <a href="https://github.com/dngea" target="_blank">
-        <img src="img/github.png" width="38px" height="38px">
-            </a>
-        </div>
-    
-        <div class="socialmedia">
-          <a href="https://vsco.co/dngea/gallery" target="_blank">
-      <img src="img/vsco.png" width="38px" height="38px">
-          </a>
-      </div>
-    
-      <button id="contactButton">Contact Me</button>
-        
-    </footer>
+     <footer id="footer" class="footer"></footer>
 
 
     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script>
@@ -160,7 +132,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
     <script src="js/main.js"></script>
     <script src="js/animated_img.js?v=1.0.1"></script>
-    <script>
+    <!-- <script>
         document.getElementById('downloadBtn').addEventListener('click', function() {
             // Crear un enlace temporal
             const link = document.createElement('a');
@@ -168,7 +140,7 @@
             link.download = 'Daniel_Gea_Resume.pdf'; // Nombre del archivo que se descargará
             link.click(); // Simula el clic para descargar
         });
-    </script>
+    </script> -->
     
 </body>
 </html>

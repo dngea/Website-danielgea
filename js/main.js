@@ -64,7 +64,7 @@ function loadHeader() {
 
 // Función para cargar el footer
 function loadFooter() {
-  console.log("loadFooter function called"); // Verificar si se llama la función
+  console.log("loadFooter function called"); 
   fetch("../components/footer.html")
       .then(response => {
           if (!response.ok) {
@@ -73,9 +73,9 @@ function loadFooter() {
           return response.text();
       })
       .then(data => {
-          console.log("Footer data loaded"); // Verificar si se recibe la respuesta
+          console.log("Footer data loaded");
           document.getElementById('footer').innerHTML = data;
-          highlightCurrentPage(); // Llamar a la función para resaltar la página actual después de cargar el footer
+          // highlightCurrentPage(); // Llamar a la función para resaltar la página actual después de cargar el footer
       })
       .catch(error => console.error('Error al cargar el footer:', error));
 }
@@ -101,26 +101,6 @@ function highlightCurrentPage() {
   }
 }
 
-// Manejador para el botón de contacto
-function setupContactButton() {
-  const contactButton = document.getElementById('contactButton');
-  if (contactButton) {
-    contactButton.addEventListener('click', function() {
-      var email = 'dngeap@gmail.com';
-      var subject = encodeURIComponent('Hi Daniel, nice to meet you');
-      var body = encodeURIComponent('Hello,\n\nI am reaching out to connect with you.\n\nThank you,\n[Your Name]');
-      var mailtoLink = 'mailto:' + email + '?subject=' + subject + '&body=' + body;
-      
-      console.log('Mailto link:', mailtoLink);
-      
-      // Abre el cliente de correo
-      window.location.href = mailtoLink;
-    });
-  } else {
-    console.error('Contact button not found');
-  }
-}
-
 // Función que inicializa los eventos de navegación
 function initNavEvents() {
   const navItems = document.querySelectorAll('.nav__li');
@@ -134,46 +114,82 @@ function initNavEvents() {
 }
 
 // Función para copiar el correo electrónico y mostrar el mensaje "Copied to clipboard!"
-function copyEmail(email) {
-  // Copiar el texto al portapapeles
-  navigator.clipboard.writeText(email).then(function() {
-      const tooltip = document.getElementById("tooltipMessage");
+function copyEmail(element, email) {
+  // Copiar al portapapeles
+  navigator.clipboard.writeText(email).then(function () {
+      const tooltip = element.nextElementSibling; // Obtener el tooltip asociado al elemento
 
-      // Cambiar el texto del tooltip a "email copied"
+      // Mostrar mensaje "email copied"
       tooltip.innerText = "email copied";
       tooltip.classList.add("show");
 
-      // Ocultar el mensaje después de 2 segundos
-      setTimeout(function() {
+      // Ocultar el tooltip después de 2 segundos
+      setTimeout(function () {
           tooltip.classList.remove("show");
-
-          // Restablecer el mensaje del tooltip a "copy email"
-          tooltip.innerText = "copy email";
+          tooltip.innerText = "copy email"; // Restaurar el texto original
       }, 2000);
-  }).catch(function(error) {
+  }).catch(function (error) {
       console.error("Error copying email to clipboard: ", error);
   });
 }
 
-// Función para mostrar el tooltip al pasar el mouse
-function showTooltip() {
-  const tooltip = document.getElementById("tooltipMessage");
-  tooltip.innerText = "copy email"; // Mostrar el mensaje "copy email"
+// Mostrar tooltip en hover
+function showTooltip(element) {
+  const tooltip = element.nextElementSibling;
+  tooltip.innerText = "copy email"; // Asegurar mensaje correcto
   tooltip.classList.add("show");
 }
 
-// Función para ocultar el tooltip al quitar el mouse
-function hideTooltip() {
-  const tooltip = document.getElementById("tooltipMessage");
+// Ocultar tooltip al salir del hover
+function hideTooltip(element) {
+  const tooltip = element.nextElementSibling;
   tooltip.classList.remove("show");
 }
 
+// resume onClick
+document.addEventListener('DOMContentLoaded', function() {
+  const downloadResume = document.getElementById('downloadBtn')
+  if (downloadResume) {
+    downloadResume.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const link = document.createElement('a');
+      link.href = '../img/home/Daniel_Gea_Resume.pdf';
+      link.download = 'Daniel_Gea_Resume.pdf';
+      link.click();
+      })
+    } else {
+      console.error('Resume no se ha encontrado')
+    }
+});
+
+// contact open mail
+function setupContactButton() {
+  const contactButton2 = document.getElementById('contactButton2');
+
+  if (contactButton2) {
+    contactButton2.addEventListener('click', (e) => {
+      e.preventDefault();
+      console.log('enviando...');
+      
+      let email2 = 'dngeap@gmail.com';
+      let subject2 = encodeURIComponent('Hi Daniel');
+      let body2 = encodeURIComponent('Hello,\n\nI am reaching out to connect with you.\n\nThank you,\n[Your Name]');
+      let mailtoLink2 = `mailto:${email2}?subject=${subject2}&body=${body2}`;
+
+      console.log('Mailto link:', mailtoLink2);
+      window.location.href = mailtoLink2;
+    });
+  } else {
+    console.error('Error: contactButton2 no encontrado en el DOM.');
+  }
+}
 
 
-// Llamar a la función para cargar el header y footer cuando la página cargue
+// Llamar a la función cuando la página cargue
 document.addEventListener('DOMContentLoaded', function() {
   loadHeader();
   loadFooter();
+  setTimeout(setupContactButton, 500);
   animateLight();
-  setupContactButton(); 
 });

@@ -30,6 +30,7 @@ body{
     width: inherit;
     height: 100vh;
     overflow-x: hidden;
+    font-size: 18px;
 }
 
 h1{
@@ -327,7 +328,7 @@ border-radius: 4px;
     justify-content: center; /* Mantiene la alineación a la derecha */
     align-items: start; /* Cambiado a flex-start para alinear la imagen en la parte superior */
     padding: 1rem;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     perspective: 1000px; /* Creates a 3D space */
     
@@ -351,12 +352,13 @@ border-radius: 4px;
 }
 
 .about__info{
-    padding: 1rem; /* Añade un poco de padding para mejorar la legibilidad */
+    padding: 0.5rem; /* Añade un poco de padding para mejorar la legibilidad */
     width: 100%;
     box-sizing: border-box; /* Asegura que el padding no cause desbordamientos */
 }
 .about__info p{
     margin: 1rem 0;
+    font-size: 1rem;
 }
 .skills-container{
     width: 75%;
