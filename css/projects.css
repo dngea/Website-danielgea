@@ -32,12 +32,12 @@ body{
 ::-moz-selection { /* Code for Firefox */
     color: var(--background);
     background: var(--soft-gray);
-  }
+}
   
-  ::selection {
+::selection {
     color: var(--background);
     background: var(--soft-gray);
-  }
+}
 
 h1, h2, h3, h4{
   font-family: var(--main-font);  
