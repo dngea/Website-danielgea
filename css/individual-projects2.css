@@ -2,8 +2,11 @@
     --font-size: 18px;
     --black: #000000;
     --gray: #E6E6E6;
+    --soft-gray: #4b4b4b;
+    --dark-gray: #282828;
     --white: #ffffff;
     --primary: #A44200;
+    --primary-lighter: #E05900;
     --background: #FFF6EE;
   
     --main-font: -apple-system, BlinkMacSystemFont, 'IBM Plex sans', system-ui;
@@ -380,6 +383,17 @@ img {
 
 
 
+
+  .footer-aside p{
+    color: var(--background);
+  }
+
+  .footer-links p, .footer-sitemap p {
+    color: var(--background);
+  }
+  .footer-aside h3{
+    color: var(--background);
+  }
 
 
 
