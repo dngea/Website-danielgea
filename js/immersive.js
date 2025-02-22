@@ -1,62 +1,67 @@
 gsap.registerPlugin(ScrollTrigger);
 
-console.log(gsap)
-console.log(ScrollTrigger)
+// console.log(gsap)
+// console.log(ScrollTrigger)
 
-const body = document.querySelector('body')
+const body = document.body
+const wrapper = document.getElementById('wrapper')
+wrapper.style.backgroundColor = "#FFF6EE"
 
-const audioControl = document.getElementById('audioControl')
+const volumeSlider = document.getElementById('volume')
+const muteButton = document.getElementById('audioControl')
 const video = document.getElementById('video')
-const volumeControl = document.getElementById('volume')
 const mute = document.getElementById('mute')
 
 const muteImg = '/img/multimedia/muted.png'
 const unmuteImg = '/img/multimedia/unmuted.png'
 const background = '#FFF6EE'
 
-audioControl.addEventListener('click', () => {
+
+muteButton.addEventListener('click', () => {
     if (video.muted) {
         video.muted = false
         mute.src = unmuteImg
+        volumeSlider.value = 0.5
+        video.volume = parseFloat(volumeSlider.value)
         console.log('Audio On')
     } else {
         video.muted = true
+        volumeSlider.value = 0
         mute.src = muteImg
         console.log('Audio Off')
     }
 })
 
-volumeControl.addEventListener('input', () => {
+volumeSlider.addEventListener('input', () => {
     if (video.muted) {
         video.muted = false
         mute.src = unmuteImg
         console.log('Audio On')
-        
     }
-    video.volume = parseFloat(volumeControl.value)    
+    video.volume = parseFloat(volumeSlider.value)    
 })
 
 
-// Establecer explícitamente el color de fondo inicial en el body
-gsap.to("body", { backgroundColor: "#FFF6EE" });  // Establecer el color inicial
 
-// Animación de cambio de color de fondo
-gsap.fromTo("body", { backgroundColor: "#FFF6EE" }, {
+gsap.to(wrapper, { backgroundColor: "#FFF6EE" });  // set initial color
+
+gsap.fromTo(wrapper, { backgroundColor: "#FFF6EE" }, {
     scrollTrigger: {
         trigger: ".immersive",
         scrub: 1,
         start: "top center",
         end: "bottom bottom",
     },
-    backgroundColor: "#242424"  // Cambia a gris al hacer scroll
+    backgroundColor: "#242424"  
 });
 
-gsap.fromTo("body", { backgroundColor: "#242424" }, {
+gsap.fromTo(wrapper, { backgroundColor: "#242424" }, {
     scrollTrigger: {
         trigger: ".immersive",
         scrub: 1,
-        start: "bottom center", // Comienza en el centro de .immersive
+        start: "bottom center", 
         end: "bottom top",
     },
-    backgroundColor: "#FFF6EE"  // Vuelve 
+    backgroundColor: "#FFF6EE"  // back to light
 });
+
