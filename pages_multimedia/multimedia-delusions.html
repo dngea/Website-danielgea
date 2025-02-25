@@ -15,22 +15,16 @@
         <title>Brutal delusions</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;800&display=swap" rel="stylesheet"> 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        
-        <!-- styles -->
-        <!-- <link rel="stylesheet" href="../css/css_individualProjects.css"> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-        <!-- <link rel="stylesheet" href="../css/main.css?v=1.0.5?v=1.0.2"> -->
-        <link rel="stylesheet" href="../css/projects.css?v=1.0.1">
-        <link rel="stylesheet" href="../css/main_navigation.css?v=1.0.3">
-        <link rel="stylesheet" href="../css/individual-projects2.css?v=1.1.3">
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/main.css?v=1.0.5?v=1.0.2"> -->
+    <link rel="stylesheet" href="../css/projects.css?v=1.0.1">
+    <link rel="stylesheet" href="../css/main_navigation.css?v=1.0.3">
+    <link rel="stylesheet" href="../css/individual-projects2.css?v=1.1.3">
+    <link rel="stylesheet" href="../css/immersive.css?v=1.0.2">
 
-        <!-- IBM PLEX SANS and Work Sans -->
+    <!-- IBM PLEX SANS and Work Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -40,13 +34,11 @@
 
 
 <body>
+    <nav id="header"></nav>
 
-    <!-- ADD HEADER -->
-    <div id="header"></div>
-
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
         <!-- BIG CONTAINER 1400px ------- -->
-        <div class="contenedor">
+        <main class="contenedor">
             <div class="back">
                 <div class="item-back">
                     <svg class="w-[20px] h-[20px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -56,19 +48,19 @@
                 </div>
             </div>
 
-            <!-- Project Introduction -->
-            <div class="container-1000">
+            <!-- Introduction -->
+            <section class="container-1000">
                 <div class="project">
-                    <div class="project__content">
+                    <header class="project__content">
                         <div class="empty"></div>
                         <div class="project__header">
                             <h1>Brutal delusions</h1>
                             <p class="date">June of 2023</p>
                             <p class="location">Porto, Portugal</p>
                         </div>
-                    </div>
+                    </header>
                     <div class="project__content">
-                        <div class="technical-rider">
+                        <aside class="technical-rider">
                             <div>
                                 <h4 class="primary">Tasks</h4>
                                 <p>Computer Vision</p>
@@ -76,12 +68,9 @@
                                 <h4 class="primary">Timeline</h4>
                                 <p>6 weeks</p>
                             </div>
-                            
-                            <!-- <h4 class="primary">Additional Info</h4>
-                            <p>those</p> -->
-                        </div>
+                        </aside>
 
-                        <div class="summary">
+                        <section class="summary">
                             <h2>Overview</h2>
                             <p>
                                 In a collaborative project with a team of three, I contributed to the creation of a 10-minute visually reactive performance using TouchDesigner. Drawing inspiration from live performances with reactive visuals, we designed an experience that blended dark, emotional music with evolving visuals to evoke nostalgia and mystery. Over six weeks, I focused on developing the reactive visuals, ensuring they seamlessly synchronized with the atmospheric soundscape to create a dreamy and immersive atmosphere.
@@ -93,13 +82,49 @@
                                 by integrating music and visuals seamlessly, providing 
                                 a captivating experience for the audience.
                             </p>
-                        </div>
+                        </section>
                     </div>
                 </div>  
-            </div>
+            </section>
             <!-- //Project Introduction -->
 
-            
+            <section class="flashing">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    >
+                    <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                    <path d="M12 8v4" />
+                    <path d="M12 16h.01" />
+                </svg>
+                
+                <p>
+                    <span class="bold">Warning</span> Flashing lights
+                </p>
+            </section>
+
+            <section class="immersive">
+                <div class="immersive-overlay">
+                    <input type="range" id="volume" min="0" max="1" step="0.01" value="0"/>
+                    <button id="audioControl" class="audioControl">
+                        <img id="mute" src="/img/multimedia/muted.png" alt="">
+                    </button>
+                </div>
+
+                <div class="videoBG">
+                    <video id="video" autoplay muted loop>
+                        <source src="/img/multimedia/brutal_delusions/delusions.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div> 
+            </section>
 
             <!-- Case Study Description -->
             <div class="container-1000">
@@ -207,7 +232,7 @@
             </div>
 
 
-        </div>
+        </main>
     </div>
 
     <footer id="footer" class="footer"></footer>
@@ -215,5 +240,8 @@
     <!-- JS ------------- -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="../js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="../js/immersive.js"></script>
 </body>
 </html>
