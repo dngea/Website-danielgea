@@ -32,3 +32,7 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 RewriteEngine On
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+# Redirigir /sound-navigation/index o /sound-navigation/index.html a /sound-navigation/ (sin index)
+RewriteCond %{THE_REQUEST} /sound-navigation/index(\.html)? [NC]
+RewriteRule ^sound-navigation/index(\.html)?$ /sound-navigation/ [R=301,L]
